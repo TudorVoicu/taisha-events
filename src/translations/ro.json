@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "story": "Povestea Noastră",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Experimentează",
+    "subtitle": "Luxul Exclusiv",
+    "description": "Narghilele premium pentru ocaziile speciale, evenimente și întâlniri private.",
+    "cta": "Explorează Serviciile"
+  },
+  "home" :{
+    "featuredServices": "Servicii recomandate",
+    "featuredServicesDescription": "Descoperă cele mai populare și de încredere servicii selectate special pentru tine.",
+    "viewAllServices": "Vezi toate serviciile",
+    "aboutUsTitle": "Despre noi",
+    "aboutUsDescription1": "Suntem o echipă pasionată, dedicată să oferim calitate și valoare prin expertiză și experiență.",
+    "aboutUsDescription2": "Misiunea noastră este să oferim servicii excepționale și să construim relații durabile cu clienții noștri.",
+    "readOurStory": "Citește povestea noastră"
+  },
+  "story": {
+    "pageTitle" : "Povestea Noastra",
+    "pageDescription" : "De unde am inceput si unde am ajuns",
+    "1": {
+      "title": "Inceputurile 'Taisha'",
+      "paragraph1": "Fondată pe principii de calitate excepțională și servicii de neegalat, Lux Hookah aduce tradiția antică a narghilelei în cadre luxoase moderne. Călătoria noastră a început cu o pasiune pentru crearea experiențelor memorabile.",
+      "paragraph2": "Fiecare narghilea pe care o oferim este meticulos fabricată și pregătită de experți care înțeleg arta și știința profilurilor perfecte de arome."
+    },
+    "2": {
+      "title": "Calitate Excepțională",
+      "paragraph1": "Achiziționăm doar cele mai fine materiale și amestecuri premium de tutun din întreaga lume. Colecția noastră prezintă design-uri exclusive care combină măiestria tradițională cu estetica modernă.",
+      "paragraph2": "Fiecare piesă din inventarul nostru trece prin verificări riguroase de calitate pentru a asigura o experiență impecabilă pentru clienții noștri."
+    },
+    "3": {
+      "title": "Experiențe Personalizate",
+      "paragraph1": "Înțelegem că fiecare eveniment este unic. Echipa noastră colaborează îndeaproape cu dumneavoastră pentru a crea o experiență narghilea personalizată care completează perfect ocazia, fie că este vorba de o întâlnire intimă sau o celebrare grandioasă.",
+      "paragraph2": "De la selecția aromelor la estetica amenajării, fiecare detaliu este personalizat pentru a depăși așteptările dumneavoastră."
+    },
+    "4": {
+      "title": "Serviciu Profesional",
+      "paragraph1": "Specialiștii noștri instruiți nu doar aranjează și întrețin narghileaua pe parcursul evenimentului dumneavoastră, ci oferă și îndrumare privind combinațiile de arome și tehnicile optime de savurare.",
+      "paragraph2": "Cu un serviciu discret și atent, ne asigurăm că experiența dumneavoastră este impecabilă, iar invitații sunt impresionați atât de calitatea produselor noastre, cât și de personalul nostru."
+    }
+  },
+  "services": {
+    "title": "Serviciile Noastre",
+    "subtitle": "Explorați gama noastră de servicii premium de închiriere narghilele concepute pentru a vă îmbunătăți experiența. Faceți clic pe orice serviciu pentru a afla mai multe despre prețuri și detalii.",
+    "viewDetails": "Vezi Detalii",
+    "pricing": "Prețuri",
+    "included": "Ce Este Inclus",
+    "options": "Opțiuni Suplimentare",
+    "request": "Solicită Acest Serviciu",
+    "event": {
+      "title": "Serviciu Narghilea pentru Evenimente",
+      "description": "Serviciu complet de narghilea pentru nunți, evenimente corporative și celebrări. Include instalare profesională, serviciu de asistență și arome premium."
+    },
+    "private": {
+      "title": "Experiență Lounge Privat",
+      "description": "Transformați-vă spațiul într-un lounge de narghilea de lux. Include narghilele premium, selecție de arome și aranjamente confortabile de ședere."
+    },
+    "vip": {
+      "title": "Experiență VIP Narghilea",
+      "description": "Serviciul nostru cel mai exclusivist, prezentând amestecuri rare de tutun, narghilele în ediție limitată și crearea personalizată de arome cu maestrul nostru."
+    },
+    "corporate": {
+      "title": "Pachet pentru Evenimente Corporative",
+      "description": "Servicii personalizate de narghilea pentru întâlniri corporative, evenimente de team-building și celebrări de afaceri. Include opțiuni personalizate cu brand."
+    },
+    "flavor": {
+      "title": "Experiență de Arome Premium",
+      "description": "Pachet concentrat pe gust, prezentând colecția noastră de amestecuri exclusive premium de tutun din întreaga lume, cu îndrumare expertă în domeniul aromelor."
+    },
+    "equipment": {
+      "title": "Închiriere Echipament",
+      "description": "Închiriere de echipament de narghilea de înaltă calitate pentru cei care preferă să-și creeze propria experiență. Include livrare, instrucțiuni de instalare și ridicare."
+    }
+  },
+  "menu": {
+    "title": "Meniul Nostru",
+    "subtitle": "Explorați selecția noastră extinsă de arome premium pentru narghilea și accesorii. Descărcați meniul nostru pentru detalii complete despre ofertele noastre.",
+    "preview": "Previzualizare Meniu",
+    "download": "Descarcă PDF",
+    "request": "Solicită Meniu Personalizat",
+    "catalog": {
+      "title": "Meniu Lux Hookah",
+      "description": "Catalogul nostru complet de narghilele premium, amestecuri exclusive de tutun și servicii de marcă."
+    },
+    "sections": {
+      "flavors": {
+        "title": "Arome Premium",
+        "description": "Amestecuri exclusive de tutun din întreaga lume, inclusiv ediții rare și limitate."
+      },
+      "hookahs": {
+        "title": "Narghilele de Marcă",
+        "description": "Colecția noastră de pipe de narghilea de designer, prezentând stiluri tradiționale și moderne."
+      },
+      "packages": {
+        "title": "Pachete de Servicii",
+        "description": "Informații detaliate despre pachetele noastre de servicii, inclusiv prețuri și oferte speciale."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactați-ne",
+    "subtitle": "Contactați-ne pentru a discuta despre următorul dumneavoastră eveniment sau pentru a vă informa despre serviciile noastre premium de închiriere narghilea.",
+    "getInTouch": "Luați Legătura",
+    "location": {
+      "title": "Zona pe care o acoperim este Municipiul București și Ilfov (transport inclus), precum și toată zona de centru-sud a României. Ne place să călătorim, ne deplasăm oriunde în România sau în străinătate, însă pentru locații mai îndepărtate există costuri de transport & cazare."
+    },
+    "phone": {
+      "title": "Telefon",
+      "number": "+40 XXX XXX XXX",
+      "hours": "Luni-Dum: 9:00 - 21:00"
+    },
+    "email": {
+      "title": "Email",
+      "info": "contact@taishaevents.com"
+    },
+    "form": {
+      "title": "Trimiteți-ne un Mesaj",
+      "name": "Numele Dvs",
+      "email": "Adresa de Email",
+      "phone": "Număr de Telefon",
+      "interest": "Interesat De",
+      "selectService": "Selectați un Serviciu",
+      "message": "Mesajul Dvs",
+      "send": "Trimite Mesaj",
+      "services": {
+        "event": "Serviciu Narghilea pentru Evenimente",
+        "private": "Experiență Lounge Privat",
+        "vip": "Experiență VIP Narghilea",
+        "corporate": "Pachet pentru Evenimente Corporative",
+        "flavors": "Experiență de Arome Premium",
+        "equipment": "Închiriere Echipament",
+        "other": "Altă Solicitare"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blogul Nostru",
+    "subtitle": "Descoperiți informații, povești și sfaturi din lumea experiențelor premium cu narghilea.",
+    "readMore": "Citește Mai Mult",
+    "backToBlog": "Înapoi la Blog",
+    "author": "Scris de",
+    "readTime": "min de citit"
+  },
+  "footer": {
+    "description": "Închiriere premium de narghilea pentru evenimente și ocazii speciale. Aducem experiențe de lux la locația dumneavoastră.",
+    "quickLinks": "Link-uri Rapide",
+    "services": "Servicii",
+    "legal": "Legal",
+    "terms": "Termeni și Condiții",
+    "privacy": "Politica de Confidențialitate",
+    "cookie": "Politica de Cookie-uri",
+    "rights": "Toate drepturile rezervate."
+  }
+}

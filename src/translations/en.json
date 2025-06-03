@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "story": "Our Story",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Experience",
+    "subtitle": "Exclusive Luxury",
+    "description": "Premium hookah rentals for your special occasions, events, and private gatherings.",
+    "cta": "Explore Services"
+  },
+  "home" :{
+    "featuredServices": "Featured Services",
+    "featuredServicesDescription": "Explore our most popular and trusted services handpicked for you.",
+    "viewAllServices": "View All Services",
+    "aboutUsTitle": "About Us",
+    "aboutUsDescription1": "We are a passionate team dedicated to delivering quality and value through our expertise and experience.",
+    "aboutUsDescription2": "Our mission is to provide exceptional service and build lasting relationships with our clients.",
+    "readOurStory": "Read Our Story"
+  },
+  "story": {
+    "pageTitle" : "Our story",
+    "pageDescription" : "Where we started and how far we've come",
+    "1": {
+      "title": "Birth of Taisha",
+      "paragraph1": "Founded on principles of exceptional quality and unparalleled service, Lux Hookah brings the ancient tradition of hookah to modern luxury settings. Our journey began with a passion for creating memorable experiences.",
+      "paragraph2": "Every hookah we provide is meticulously crafted and prepared by experts who understand the art and science of perfect flavor profiles."
+    },
+    "2": {
+      "title": "Exceptional Quality",
+      "paragraph1": "We source only the finest materials and premium tobacco blends from around the world. Our collection features exclusive designs that combine traditional craftsmanship with modern aesthetics.",
+      "paragraph2": "Each piece in our inventory undergoes rigorous quality checks to ensure a flawless experience for our clients."
+    },
+    "3": {
+      "title": "Bespoke Experiences",
+      "paragraph1": "We understand that every event is unique. Our team works closely with you to create a tailored hookah experience that perfectly complements your occasion, whether it's an intimate gathering or a grand celebration.",
+      "paragraph2": "From flavor selection to setup aesthetics, every detail is customized to exceed your expectations."
+    },
+    "4": {
+      "title": "Professional Service",
+      "paragraph1": "Our trained specialists not only set up and maintain your hookah throughout your event but also provide guidance on flavor combinations and optimal enjoyment techniques.",
+      "paragraph2": "With discreet, attentive service, we ensure your experience is seamless and your guests are impressed by both the quality of our products and our staff."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Explore our range of premium hookah rental services designed to elevate your experience. Click on any service to learn more about pricing and details.",
+    "viewDetails": "View Details",
+    "pricing": "Pricing",
+    "included": "What's Included",
+    "options": "Additional Options",
+    "request": "Request This Service",
+    "event": {
+      "title": "Event Hookah Service",
+      "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
+    },
+    "private": {
+      "title": "Private Lounge Experience",
+      "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
+    },
+    "vip": {
+      "title": "VIP Hookah Experience",
+      "description": "Our most exclusive service featuring rare tobacco blends, limited edition hookahs, and personalized flavor creation with our master blender."
+    },
+    "corporate": {
+      "title": "Corporate Event Package",
+      "description": "Customized hookah services for corporate gatherings, team-building events, and business celebrations. Includes branded options."
+    },
+    "flavor": {
+      "title": "Premium Flavor Experience",
+      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+    },
+    "equipment": {
+      "title": "Equipment Rental",
+      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+    }
+  },
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Explore our extensive selection of premium hookah flavors and accessories. Download our menu for complete details on our offerings.",
+    "preview": "Preview Menu",
+    "download": "Download PDF",
+    "request": "Request Custom Menu",
+    "catalog": {
+      "title": "Lux Hookah Menu",
+      "description": "Our complete catalog of premium hookahs, exclusive tobacco blends, and signature services."
+    },
+    "sections": {
+      "flavors": {
+        "title": "Premium Flavors",
+        "description": "Exclusive tobacco blends from around the world, including rare and limited editions."
+      },
+      "hookahs": {
+        "title": "Signature Hookahs",
+        "description": "Our collection of designer hookah pipes, featuring traditional and modern styles."
+      },
+      "packages": {
+        "title": "Service Packages",
+        "description": "Detailed information on our service packages, including pricing and special offers."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out to discuss your next event or inquire about our premium hookah rental services.",
+    "getInTouch": "Get In Touch",
+    "location": {
+      "title": "The area we cover includes the Municipality of Bucharest and Ilfov (transport included), as well as the entire central-southern region of Romania. We love to travel and we can go anywhere in Romania or abroad; however, for more distant locations, transport and accommodation costs will apply."
+    },
+    "phone": {
+      "title": "Phone",
+      "number": "+40 XXX XXX XXX",
+      "hours": "Mon-Sun: 9:00 - 21:00"
+    },
+    "email": {
+      "title": "Email",
+      "info": "contact@taishaevents.com"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "interest": "Interested In",
+      "selectService": "Select a Service",
+      "message": "Your Message",
+      "send": "Send Message",
+      "services": {
+        "event": "Event Hookah Service",
+        "private": "Private Lounge Experience",
+        "vip": "VIP Hookah Experience",
+        "corporate": "Corporate Event Package",
+        "flavors": "Premium Flavor Experience",
+        "equipment": "Equipment Rental",
+        "other": "Other Inquiry"
+      }
+    }
+  },
+  "blog": {
+    "title": "Our Blog",
+    "subtitle": "Discover insights, stories, and tips from the world of premium hookah experiences.",
+    "readMore": "Read More",
+    "backToBlog": "Back to Blog",
+    "author": "Written by",
+    "readTime": "min read"
+  },
+  "footer": {
+    "description": "Premium hookah rental for events and special occasions. Bringing luxury experiences to your venue.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "legal": "Legal",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "rights": "All rights reserved."
+  }
+}
