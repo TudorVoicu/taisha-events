@@ -75,7 +75,7 @@ const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <img 
-                    src={service.image} 
+                    src={service.images[0]} 
                     alt={service.title} 
                     className="w-full h-64 object-cover rounded-lg mb-4" 
                   />
