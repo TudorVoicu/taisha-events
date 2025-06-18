@@ -1,7 +1,7 @@
 export interface Service {
   id: string;
   title: string;
-  image: string;
+  images: string[];
   description: string;
   pricing: string[];
   includes: string[];
@@ -9,10 +9,14 @@ export interface Service {
 }
 
 export const serviceData: Record<string, Service> = {
-  '1': {
-    id: '1',
+  'fotovideo': {
+    id: 'fotovideo',
     title: 'Event Hookah Service',
-    image: 'https://images.unsplash.com/photo-1611849372205-9132c047b292?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    images: [
+      "/images/services/fotovideo/pb1.jpg",
+      "/images/services/fotovideo/pb2.jpg",
+      "/images/services/fotovideo/pb3.jpg"
+    ],
     description: 'Our complete hookah service for special events is designed to add a touch of luxury and intrigue to your celebration. Our professional staff will handle everything from setup to cleanup, allowing you and your guests to simply enjoy the experience.',
     pricing: [
       '<span class="font-medium">Standard Package:</span> €300 (up to 2 hookahs, 4 hours)',
@@ -35,10 +39,10 @@ export const serviceData: Record<string, Service> = {
       'Custom setup design to match event theme'
     ]
   },
-  '2': {
-    id: '2',
+  'hookas': {
+    id: 'hookas',
     title: 'Private Lounge Experience',
-    image: 'https://images.unsplash.com/photo-1583002083815-8c6305bd57d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1583002083815-8c6305bd57d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
     description: 'Transform your space into a luxury hookah lounge with our premium setup service. Perfect for intimate gatherings, private parties, or special celebrations at home or your chosen venue.',
     pricing: [
       '<span class="font-medium">Intimate Setup:</span> €250 (1-2 hookahs, up to 10 guests)',
@@ -61,10 +65,10 @@ export const serviceData: Record<string, Service> = {
       'Extended service hours (+€40 per hour)'
     ]
   },
-  '3': {
-    id: '3',
+  'dancers': {
+    id: 'dancers',
     title: 'VIP Hookah Experience',
-    image: 'https://images.unsplash.com/photo-1586006964997-e30336a503df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1586006964997-e30336a503df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
     description: 'Our most exclusive offering for those seeking an extraordinary hookah experience. Featuring rare tobacco blends, limited edition hookahs, and personalized service from our master blender.',
     pricing: [
       '<span class="font-medium">Executive Experience:</span> €500 (2-4 guests)',
@@ -88,10 +92,10 @@ export const serviceData: Record<string, Service> = {
       'Celebrity hookah master (subject to availability)'
     ]
   },
-  '4': {
-    id: '4',
+  'mirror': {
+    id: 'mirror',
     title: 'Corporate Event Package',
-    image: 'https://images.unsplash.com/photo-1597486606297-67626006c555?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1597486606297-67626006c555?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
     description: 'Elevate your corporate events with our professional hookah services. We offer branded experiences tailored to your company culture and event objectives, perfect for team building, client appreciation, or corporate celebrations.',
     pricing: [
       '<span class="font-medium">Small Corporate:</span> €450 (up to 25 guests)',
@@ -116,10 +120,10 @@ export const serviceData: Record<string, Service> = {
       'Integration with other event elements'
     ]
   },
-  '5': {
-    id: '5',
+  'smoke': {
+    id: 'smoke',
     title: 'Premium Flavor Experience',
-    image: 'https://images.unsplash.com/photo-1613127826277-303fa6b8fc03?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1613127826277-303fa6b8fc03?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
     description: 'A taste-focused hookah experience featuring our collection of exclusive premium tobacco blends from around the world. Guided by our flavor experts, this service is perfect for connoisseurs and those looking to explore the rich world of hookah flavors.',
     pricing: [
       '<span class="font-medium">Flavor Tour:</span> €200 (2-4 guests, 4 flavors)',
@@ -142,10 +146,91 @@ export const serviceData: Record<string, Service> = {
       'Take-home flavor samples'
     ]
   },
-  '6': {
-    id: '6',
+  'scenes': {
+    id: 'scenes',
     title: 'Equipment Rental',
-    image: 'https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
+    description: 'High-quality hookah equipment rental for those who prefer to create their own experience. Our premium hookahs and accessories are meticulously maintained and sanitized to ensure an exceptional experience for you and your guests.',
+    pricing: [
+      '<span class="font-medium">Standard Hookah:</span> €60 per day',
+      '<span class="font-medium">Premium Hookah:</span> €90 per day',
+      '<span class="font-medium">Luxury Designer Hookah:</span> €150 per day',
+      '<span class="font-medium">Weekend Package:</span> 2-day rental at 1.5x daily rate'
+    ],
+    includes: [
+      'Clean, sanitized hookah and base',
+      'Hoses and mouthpieces',
+      'Quality clay bowl',
+      'Heat management system',
+      'Tongs and accessories',
+      'Setup instructions',
+      'Delivery and pickup'
+    ],
+    options: [
+      'Premium tobacco flavors (+€25 per 100g)',
+      'Natural coconut coals (+€15 per box)',
+      'Additional hoses and mouthpieces',
+      'Setup service available (+€40)'
+    ]
+  },
+  'dj': {
+    id: 'dj',
+    title: 'Equipment Rental',
+    images: ['https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
+    description: 'High-quality hookah equipment rental for those who prefer to create their own experience. Our premium hookahs and accessories are meticulously maintained and sanitized to ensure an exceptional experience for you and your guests.',
+    pricing: [
+      '<span class="font-medium">Standard Hookah:</span> €60 per day',
+      '<span class="font-medium">Premium Hookah:</span> €90 per day',
+      '<span class="font-medium">Luxury Designer Hookah:</span> €150 per day',
+      '<span class="font-medium">Weekend Package:</span> 2-day rental at 1.5x daily rate'
+    ],
+    includes: [
+      'Clean, sanitized hookah and base',
+      'Hoses and mouthpieces',
+      'Quality clay bowl',
+      'Heat management system',
+      'Tongs and accessories',
+      'Setup instructions',
+      'Delivery and pickup'
+    ],
+    options: [
+      'Premium tobacco flavors (+€25 per 100g)',
+      'Natural coconut coals (+€15 per box)',
+      'Additional hoses and mouthpieces',
+      'Setup service available (+€40)'
+    ]
+  },
+  'ice': {
+    id: 'ice',
+    title: 'Equipment Rental',
+    images: ['https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
+    description: 'High-quality hookah equipment rental for those who prefer to create their own experience. Our premium hookahs and accessories are meticulously maintained and sanitized to ensure an exceptional experience for you and your guests.',
+    pricing: [
+      '<span class="font-medium">Standard Hookah:</span> €60 per day',
+      '<span class="font-medium">Premium Hookah:</span> €90 per day',
+      '<span class="font-medium">Luxury Designer Hookah:</span> €150 per day',
+      '<span class="font-medium">Weekend Package:</span> 2-day rental at 1.5x daily rate'
+    ],
+    includes: [
+      'Clean, sanitized hookah and base',
+      'Hoses and mouthpieces',
+      'Quality clay bowl',
+      'Heat management system',
+      'Tongs and accessories',
+      'Setup instructions',
+      'Delivery and pickup'
+    ],
+    options: [
+      'Premium tobacco flavors (+€25 per 100g)',
+      'Natural coconut coals (+€15 per box)',
+      'Additional hoses and mouthpieces',
+      'Setup service available (+€40)'
+    ]
+  },
+  'book': {
+    id: 'book',
+    title: 'Equipment Rental',
+    images: ['https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
     description: 'High-quality hookah equipment rental for those who prefer to create their own experience. Our premium hookahs and accessories are meticulously maintained and sanitized to ensure an exceptional experience for you and your guests.',
     pricing: [
       '<span class="font-medium">Standard Hookah:</span> €60 per day',

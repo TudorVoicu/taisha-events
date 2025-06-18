@@ -35,9 +35,9 @@ const ServicesPage = () => {
             <div key={service.id} className="hover-scale mobile-no-animation">
               <ServiceCard
                 id={service.id}
-                image={service.image}
-                title={t(`services.${service.id === '1' ? 'event' : service.id === '2' ? 'private' : service.id === '3' ? 'vip' : service.id === '4' ? 'corporate' : service.id === '5' ? 'flavor' : 'equipment'}.title`)}
-                description={t(`services.${service.id === '1' ? 'event' : service.id === '2' ? 'private' : service.id === '3' ? 'vip' : service.id === '4' ? 'corporate' : service.id === '5' ? 'flavor' : 'equipment'}.description`)}
+                image={service.images[0]}
+                title={t(`services.${service.id}.title`)}
+                description={t(`services.${service.id}.description`)}
                 onOpenDetails={handleOpenDetails}
                 linkTo={`/services/${service.id}`}
               />

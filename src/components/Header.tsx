@@ -8,6 +8,8 @@ import LanguageToggle from "@/components/LanguageToggle";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { serviceData } from "@/data/serviceData";
+import { packagesData } from "@/data/packageData";
+import clsx from "clsx";
 
 interface NavLink {
   href: string;
@@ -29,11 +31,21 @@ const Header = () => {
 
   const servicesDropdown = Object.values(serviceData).map(service => ({
     href: `/services/${service.id}`,
-    label: t(`services.${service.id === '1' ? 'event' : service.id === '2' ? 'private' : service.id === '3' ? 'vip' : service.id === '4' ? 'corporate' : service.id === '5' ? 'flavor' : 'equipment'}.title`)
+    label: t(`services.${service.id}.title`)
   }));
 
+  const packagesDropdown = Object.values(packagesData).map(pkg => ({
+    href: `/packages/${pkg.id}`,
+    label: t(`packages.${pkg.id}.title`)
+  }));
+  
   const navLinks: NavLink[] = [
     { href: "/", label: t("nav.home") },
+    { 
+      href: "/packages", 
+      label: t("nav.packages"),
+      dropdown: packagesDropdown
+    },
     { 
       href: "/services", 
       label: t("nav.services"),
@@ -106,28 +118,45 @@ const Header = () => {
                 <div
                   onMouseEnter={() => handleDropdownHover(link.href, true)}
                   onMouseLeave={() => handleDropdownHover(link.href, false)}
+                  className="relative"
                 >
-                  <button
-                    onClick={() => handleDropdownToggle(link.href)}
+                  <Link
+                    href={link.href}
                     className={`flex items-center text-white hover:text-gold transition-colors duration-300 ${
                       location === link.href || location.startsWith(`${link.href}/`) ? "text-gold" : ""
                     }`}
                   >
                     {link.label}
                     <ChevronDown className="ml-1 h-4 w-4" />
-                  </button>
-                  
+                  </Link>
+
                   {activeDropdown === link.href && (
                     <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-background border border-gold py-1 z-50">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="block px-4 py-2 text-sm text-foreground hover:bg-gold hover:text-white transition-colors duration-200"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
+                      {link.dropdown?.map((item, index) => {
+                        if (!link.dropdown) return null;
+                        const isFirst = index === 0;
+                        const isLast = index === link.dropdown.length - 1;
+
+                        const hoverBorders = isFirst
+                          ? "hover:border-b-[1px]"
+                          : isLast
+                          ? "hover:border-t-[1px]"
+                          : "hover:border-t-[1px] hover:border-b-[1px]";
+
+                        return (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className={clsx(
+                              "block px-4 py-2 text-sm text-foreground border border-transparent border-t border-b",
+                              hoverBorders,
+                              "hover:border-[hsl(var(--color-accent))] hover:border-l-0 hover:border-r-0 hover:pl-[calc(1rem+1px)]"
+                            )}
+                          >
+                            {item.label}
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -141,6 +170,7 @@ const Header = () => {
                   {link.label}
                 </Link>
               )}
+
             </li>
           ))}
         </ul>

@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "packages": "Packages",
     "services": "Services",
     "story": "Our Story",
     "blog": "Blog",
@@ -10,7 +11,9 @@
     "title": "Experience",
     "subtitle": "Exclusive Luxury",
     "description": "Premium hookah rentals for your special occasions, events, and private gatherings.",
-    "cta": "Explore Services"
+    "cta": "Explore Services",
+    "servicesBtn": "Our Services",
+    "contactBtn" : "Contact"
   },
   "home" :{
     "featuredServices": "Featured Services",
@@ -50,33 +53,78 @@
     "subtitle": "Explore our range of premium hookah rental services designed to elevate your experience. Click on any service to learn more about pricing and details.",
     "viewDetails": "View Details",
     "pricing": "Pricing",
-    "included": "What's Included",
+    "includes": "What's Included",
     "options": "Additional Options",
-    "request": "Request This Service",
-    "event": {
-      "title": "Event Hookah Service",
+    "inquire": "Request This Service",
+    "fotovideo": {
+      "title": "Foto-Video",
       "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
     },
-    "private": {
-      "title": "Private Lounge Experience",
+    "hookas": {
+      "title": "Hooka Rental",
       "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
     },
-    "vip": {
-      "title": "VIP Hookah Experience",
+    "dancers": {
+      "title": "Oriental dancers",
       "description": "Our most exclusive service featuring rare tobacco blends, limited edition hookahs, and personalized flavor creation with our master blender."
     },
-    "corporate": {
-      "title": "Corporate Event Package",
+    "mirror": {
+      "title": "Magic Mirror",
       "description": "Customized hookah services for corporate gatherings, team-building events, and business celebrations. Includes branded options."
     },
-    "flavor": {
-      "title": "Premium Flavor Experience",
+    "smoke": {
+      "title": "Heavy Smoke",
       "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
     },
-    "equipment": {
-      "title": "Equipment Rental",
+    "scenes": {
+      "title": "Scenes",
+      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+    },
+    "dj": {
+      "title": "DJ",
+      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+    },
+    "ice": {
+      "title": "Dry Ice",
+      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+    },
+    "book": {
+      "title": "Audio Guest Book",
       "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
     }
+  },
+  "serviceDetail": {
+    "notFound": "Service not found",
+    "backToServices": "Back to Services"
+  },
+  "packages": {
+    "title": "Our packages",
+    "subtitle": "We offer service packages for a variety of events.",
+    "viewDetails": "View Details",
+    "pricing": "Pricing",
+    "includes": "What's Included",
+    "options": "Additional Options",
+    "inquire": "Request This Service",
+    "wedding": {
+      "title": "Wedding",
+      "description": "We will make your special day stress-free."
+    },
+    "baptism": {
+      "title": "Baptism",
+      "description": "idk ce dracu sa scriu aici."
+    },
+    "corporate": {
+      "title": "Corporate",
+      "description": "Corporate parties that are sure to make an impressiono of your colleagues."
+    },
+    "custom": {
+      "title": "Custom",
+      "description": "Got other upcomming events? Let us help!"
+    }
+  },
+  "packageDetail": {
+    "notFound": "Package not found",
+    "backToPackages": "Back to Packages"
   },
   "menu": {
     "title": "Our Menu",

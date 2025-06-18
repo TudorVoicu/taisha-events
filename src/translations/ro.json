@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Acasă",
+    "packages": "Pachete",
     "services": "Servicii",
     "story": "Povestea Noastră",
     "blog": "Blog",
@@ -10,7 +11,9 @@
     "title": "Experimentează",
     "subtitle": "Luxul Exclusiv",
     "description": "Narghilele premium pentru ocaziile speciale, evenimente și întâlniri private.",
-    "cta": "Explorează Serviciile"
+    "cta": "Explorează Serviciile",
+    "servicesBtn": "Servicile Noastre",
+    "contactBtn" : "Contact"
   },
   "home" :{
     "featuredServices": "Servicii recomandate",
@@ -50,33 +53,78 @@
     "subtitle": "Explorați gama noastră de servicii premium de închiriere narghilele concepute pentru a vă îmbunătăți experiența. Faceți clic pe orice serviciu pentru a afla mai multe despre prețuri și detalii.",
     "viewDetails": "Vezi Detalii",
     "pricing": "Prețuri",
-    "included": "Ce Este Inclus",
+    "includes": "Ce Este Inclus",
     "options": "Opțiuni Suplimentare",
-    "request": "Solicită Acest Serviciu",
-    "event": {
-      "title": "Serviciu Narghilea pentru Evenimente",
-      "description": "Serviciu complet de narghilea pentru nunți, evenimente corporative și celebrări. Include instalare profesională, serviciu de asistență și arome premium."
+    "inquire": "Solicită Acest Serviciu",
+    "fotovideo": {
+      "title": "Foto-Video",
+      "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
     },
-    "private": {
-      "title": "Experiență Lounge Privat",
-      "description": "Transformați-vă spațiul într-un lounge de narghilea de lux. Include narghilele premium, selecție de arome și aranjamente confortabile de ședere."
+    "hookas": {
+      "title": "Inchirieri Narghilele",
+      "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
     },
-    "vip": {
-      "title": "Experiență VIP Narghilea",
-      "description": "Serviciul nostru cel mai exclusivist, prezentând amestecuri rare de tutun, narghilele în ediție limitată și crearea personalizată de arome cu maestrul nostru."
+    "dancers": {
+      "title": "Dansatoare Orientale",
+      "description": "Our most exclusive service featuring rare tobacco blends, limited edition hookahs, and personalized flavor creation with our master blender."
+    },
+    "mirror": {
+      "title": "Oglinda Magica",
+      "description": "Customized hookah services for corporate gatherings, team-building events, and business celebrations. Includes branded options."
+    },
+    "smoke": {
+      "title": "Fum Greu",
+      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+    },
+    "scenes": {
+      "title": "Scene",
+      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+    },
+    "dj": {
+      "title": "DJ",
+      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+    },
+    "ice": {
+      "title": "Gheata Carbonica",
+      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+    },
+    "book": {
+      "title": "Audio Guest Book",
+      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+    }
+  },
+  "serviceDetail": {
+    "notFound": "Serviciul nu a fost gasit",
+    "backToServices": "Inapoi la servicii"
+  },
+  "packages": {
+    "title": "Our packages",
+    "subtitle": "We offer service packages for a variety of events.",
+    "viewDetails": "View Details",
+    "pricing": "Pricing",
+    "includes": "What's Included",
+    "options": "Additional Options",
+    "inquire": "Request This Service",
+    "wedding": {
+      "title": "Wedding",
+      "description": "We will make your special day stress-free."
+    },
+    "baptism": {
+      "title": "Baptism",
+      "description": "idk ce dracu sa scriu aici."
     },
     "corporate": {
-      "title": "Pachet pentru Evenimente Corporative",
-      "description": "Servicii personalizate de narghilea pentru întâlniri corporative, evenimente de team-building și celebrări de afaceri. Include opțiuni personalizate cu brand."
+      "title": "Corporate",
+      "description": "Corporate parties that are sure to make an impressiono of your colleagues."
     },
-    "flavor": {
-      "title": "Experiență de Arome Premium",
-      "description": "Pachet concentrat pe gust, prezentând colecția noastră de amestecuri exclusive premium de tutun din întreaga lume, cu îndrumare expertă în domeniul aromelor."
-    },
-    "equipment": {
-      "title": "Închiriere Echipament",
-      "description": "Închiriere de echipament de narghilea de înaltă calitate pentru cei care preferă să-și creeze propria experiență. Include livrare, instrucțiuni de instalare și ridicare."
+    "custom": {
+      "title": "Custom",
+      "description": "Got other upcomming events? Let us help!"
     }
+  },
+  "packageDetail": {
+    "notFound": "Pachetul nu a fost gasit",
+    "backToPackages": "Inapoi la pachete"
   },
   "menu": {
     "title": "Meniul Nostru",

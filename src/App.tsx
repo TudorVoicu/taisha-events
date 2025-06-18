@@ -17,11 +17,15 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { I18nextProvider } from "react-i18next";
 import i18n from "@/lib/i18n";
+import PackagesPage from "./pages/PackagesPage";
+import PackageDetailPage from "./pages/PackageDetailPage";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={HomePage} />
+      <Route path="/packages" component={PackagesPage} />
+      <Route path="/packages/:id" component={PackageDetailPage} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/services/:id" component={ServiceDetailPage} />
       <Route path="/story" component={StoryPage} />

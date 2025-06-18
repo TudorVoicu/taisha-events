@@ -3,37 +3,36 @@ import { useParams, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Check } from "lucide-react";
-import { serviceData, type Service } from "@/data/serviceData";
+import { packagesData, type Package } from "@/data/packageData";
 import { Button } from "@/components/ui/button";
 
-const ServiceDetailPage = () => {
+const PackageDetailPage = () => {
   const { id } = useParams();
   const [, setLocation] = useLocation();
   const { t } = useTranslation();
-  const [service, setService] = useState<Service | null>(null);
+  const [packageData, setPackageData] = useState<Package | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (id && serviceData[id]) {
-      setService(serviceData[id]);
+    if (id && packagesData[id]) {
+      setPackageData(packagesData[id]);
     }
     setLoading(false);
   }, [id]);
 
-  //slideshow behaviour
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const imageRef = useRef<HTMLDivElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const cycleNext = () => {
-    if (!service?.images.length) return;
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % service.images.length);
+    if (!packageData?.images?.length) return;
+    setCurrentImageIndex((prev) => (prev + 1) % packageData.images.length);
   };
 
   const cyclePrevious = () => {
-    if (!service?.images.length) return;
-    setCurrentImageIndex((prevIndex) =>
-      (prevIndex - 1 + service.images.length) % service.images.length
+    if (!packageData?.images?.length) return;
+    setCurrentImageIndex((prev) =>
+      (prev - 1 + packageData.images.length) % packageData.images.length
     );
   };
 
@@ -45,11 +44,9 @@ const ServiceDetailPage = () => {
   };
 
   const handleImageClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!service?.images.length || !imageRef.current) return;
-
+    if (!packageData?.images?.length || !imageRef.current) return;
     const { left, width } = imageRef.current.getBoundingClientRect();
     const clickX = e.clientX - left;
-
     const isLeft = clickX < width / 2;
     isLeft ? cyclePrevious() : cycleNext();
     resetTimer();
@@ -60,7 +57,8 @@ const ServiceDetailPage = () => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [service]);
+  }, [packageData]);
+
 
   if (loading) {
     return (
@@ -70,15 +68,15 @@ const ServiceDetailPage = () => {
     );
   }
 
-  if (!service) {
+  if (!packageData) {
     return (
       <div className="min-h-screen pt-24 flex flex-col justify-center items-center bg-background">
-        <h2 className="text-2xl font-playfair mb-4">{t("serviceDetail.notFound")}</h2>
+        <h2 className="text-2xl font-playfair mb-4">{t("packageDetail.notFound")}</h2>
         <Button 
-          onClick={() => setLocation("/services")}
+          onClick={() => setLocation("/packages")}
           className="bg-gold hover:bg-opacity-80 text-white"
         >
-          {t("serviceDetail.backToServices")}
+          {t("packageDetail.backToPackages")}
         </Button>
       </div>
     );
@@ -88,31 +86,32 @@ const ServiceDetailPage = () => {
     <section className="min-h-screen pt-24 pb-16 bg-background">
       <div className="container mx-auto px-4">
         <Button 
-          onClick={() => setLocation("/services")}
+          onClick={() => setLocation("/packages")}
           variant="outline" 
           className="mb-8 border-gold text-gold hover:bg-gold hover:text-white"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          {t("serviceDetail.backToServices")}
+          {t("packageDetail.backToPackages")}
         </Button>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
             ref={imageRef}
-            key={service.images[currentImageIndex]}
+            key={packageData.images[currentImageIndex]}
             onClick={handleImageClick}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="rounded-lg overflow-hidden shadow-lg w-full h-[400px] select-none"
+            className="rounded-lg overflow-hidden shadow-lg w-full h-[400px] cursor-pointer select-none"
           >
             <img
-              src={service.images[currentImageIndex]}
-              alt={`${service.title} image ${currentImageIndex + 1}`}
+              src={packageData.images[currentImageIndex]}
+              alt={`${t(`packages.${packageData.id}.title`)} image ${currentImageIndex + 1}`}
               className="w-full h-full object-cover"
             />
           </motion.div>
+
           
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -120,21 +119,21 @@ const ServiceDetailPage = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t(`services.${service.id}.title`)}
+              {t(`packages.${packageData.id}.title`)}
             </h1>
             
             <div className="w-16 h-1 bg-gold mb-6"></div>
             
             <p className="text-secondary mb-8">
-              {t(`services.${service.id}.description`)}
+              {t(`packages.${packageData.id}.description`)}
             </p>
             
             <div className="mb-8">
               <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                {t("services.pricing")}
+                {t("packages.pricing")}
               </h3>
               <ul className="space-y-3">
-                {service.pricing.map((price, index) => (
+                {packageData.pricing.map((price, index) => (
                   <li key={index} className="text-secondary" dangerouslySetInnerHTML={{ __html: price }} />
                 ))}
               </ul>
@@ -142,10 +141,10 @@ const ServiceDetailPage = () => {
             
             <div className="mb-8">
               <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                {t("services.includes")}
+                {t("packages.includes")}
               </h3>
               <ul className="space-y-2">
-                {service.includes.map((item, index) => (
+                {packageData.includes.map((item, index) => (
                   <li key={index} className="flex items-start">
                     <Check className="text-gold h-5 w-5 mr-2 mt-1 flex-shrink-0" />
                     <span className="text-secondary">{item}</span>
@@ -156,10 +155,10 @@ const ServiceDetailPage = () => {
             
             <div>
               <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                {t("services.options")}
+                {t("packages.options")}
               </h3>
               <ul className="space-y-2">
-                {service.options.map((option, index) => (
+                {packageData.options.map((option, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-gold mr-2">•</span>
                     <span className="text-secondary">{option}</span>
@@ -172,7 +171,7 @@ const ServiceDetailPage = () => {
               className="mt-8 bg-gold hover:bg-opacity-80 text-white"
               onClick={() => setLocation("/contact")}
             >
-              {t("services.inquire")}
+              {t("packages.inquire")}
             </Button>
           </motion.div>
         </div>
@@ -181,4 +180,4 @@ const ServiceDetailPage = () => {
   );
 };
 
-export default ServiceDetailPage;
+export default PackageDetailPage;

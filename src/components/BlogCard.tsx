@@ -31,7 +31,7 @@ const BlogCard = ({
 
   return (
     <motion.div 
-      className="bg-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 h-full flex flex-col"
+      className="bg-card rounded-lg overflow-hidden shadow-lg h-full flex flex-col"
       whileHover={{ y: -5 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ const BlogCard = ({
           
           <Link href={`/blog/${slug}`}>
             <Button
-              className="bg-gold hover:bg-opacity-80 text-white px-4 py-2 rounded-sm text-sm flex items-center gap-2 transition-colors duration-300"
+              className="bg-gold hover:bg-opacity-80 text-white px-4 py-2 rounded-sm text-sm flex items-center gap-2 transition-colors duration-300 hover-button"
             >
               {t("blog.readMore")}
               <ArrowRight className="h-4 w-4" />
