@@ -100,6 +100,7 @@ const Header = () => {
       <motion.div
         className="transition-transform duration-500 ease-in-out"
         animate={{ scale: isScrolled ? 0.7 : 1 }}
+        transition={{ duration: 0, ease: "easeInOut" }}
       >
         <Link href="/" className="flex items-center">
           <div className="bg-primary p-2 rounded-lg mr-2 border border-gold">

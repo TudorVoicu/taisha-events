@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, MessageCircle, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
+
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -34,14 +36,38 @@ const ContactPage = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
-    toast({
-      title: "Message sent",
-      description: "Thank you for your message! We will contact you shortly.",
-    });
-    form.reset();
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    try {
+      const result = await emailjs.send(
+        'zoho_taisha_smtp',
+        'template_2x6ikqs',
+        {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          service: data.service,
+          message: data.message,
+        },
+        'dL93QDuUB_gKPv1fR'
+      );
+
+      toast({
+        title: "Message sent",
+        description: "Thank you for your message! We will contact you shortly.",
+      });
+      form.reset();
+
+      console.log(result.text);
+    } catch (error) {
+      console.error('Email send error:', error);
+      toast({
+        title: "Failed to send",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
+
 
   return (
     <section className="min-h-screen py-28 bg-black">
@@ -148,7 +174,7 @@ const ContactPage = () => {
                             className="w-full bg-black border border-dark-purple rounded-sm px-4 py-6 text-white focus:border-gold focus:outline-none transition-colors" 
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-white italic" />
                       </FormItem>
                     )}
                   />
@@ -166,7 +192,7 @@ const ContactPage = () => {
                             className="w-full bg-black border border-dark-purple rounded-sm px-4 py-6 text-white focus:border-gold focus:outline-none transition-colors" 
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-white italic" />
                       </FormItem>
                     )}
                   />
@@ -185,7 +211,7 @@ const ContactPage = () => {
                           className="w-full bg-black border border-dark-purple rounded-sm px-4 py-6 text-white focus:border-gold focus:outline-none transition-colors" 
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-white italic" />
                     </FormItem>
                   )}
                 />
@@ -212,7 +238,7 @@ const ContactPage = () => {
                           <SelectItem value="other">{t("contact.form.services.other")}</SelectItem>
                         </SelectContent>
                       </Select>
-                      <FormMessage />
+                      <FormMessage className="text-white italic" />
                     </FormItem>
                   )}
                 />
@@ -230,7 +256,7 @@ const ContactPage = () => {
                           className="w-full bg-black border border-dark-purple rounded-sm px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors resize-none" 
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-white italic" />
                     </FormItem>
                   )}
                 />
