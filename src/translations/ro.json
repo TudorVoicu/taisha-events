@@ -60,7 +60,7 @@
       "title": "Foto-Video",
       "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
     },
-    "hookas": {
+    "hookahs": {
       "title": "Inchirieri Narghilele",
       "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
     },
@@ -196,13 +196,14 @@
     "readTime": "min de citit"
   },
   "footer": {
-    "description": "Închiriere premium de narghilea pentru evenimente și ocazii speciale. Aducem experiențe de lux la locația dumneavoastră.",
+    "description": "Servicii premium pentru evenimentele si momentele speciale.",
     "quickLinks": "Link-uri Rapide",
-    "services": "Servicii",
+    "services": "Servicii Populare",
     "legal": "Legal",
+    "other": "Altele",
     "terms": "Termeni și Condiții",
     "privacy": "Politica de Confidențialitate",
     "cookie": "Politica de Cookie-uri",
-    "rights": "Toate drepturile rezervate."
+    "rights": ""
   }
 }

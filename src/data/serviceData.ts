@@ -39,8 +39,8 @@ export const serviceData: Record<string, Service> = {
       'Custom setup design to match event theme'
     ]
   },
-  'hookas': {
-    id: 'hookas',
+  'hookahs': {
+    id: 'hookahs',
     title: 'Private Lounge Experience',
     images: ['https://images.unsplash.com/photo-1583002083815-8c6305bd57d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
     description: 'Transform your space into a luxury hookah lounge with our premium setup service. Perfect for intimate gatherings, private parties, or special celebrations at home or your chosen venue.',

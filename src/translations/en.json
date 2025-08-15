@@ -60,8 +60,8 @@
       "title": "Foto-Video",
       "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
     },
-    "hookas": {
-      "title": "Hooka Rental",
+    "hookahs": {
+      "title": "Hookah Rental",
       "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
     },
     "dancers": {
@@ -196,13 +196,14 @@
     "readTime": "min read"
   },
   "footer": {
-    "description": "Premium hookah rental for events and special occasions. Bringing luxury experiences to your venue.",
+    "description": "Premium services for special events and moments.",
     "quickLinks": "Quick Links",
-    "services": "Services",
+    "services": "Popular Services",
     "legal": "Legal",
+    "other": "Others",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy",
-    "rights": "All rights reserved."
+    "rights": ""
   }
 }
