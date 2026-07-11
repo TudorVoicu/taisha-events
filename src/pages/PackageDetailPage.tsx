@@ -68,6 +68,11 @@ const PackageDetailPage = () => {
     );
   }
 
+  const translatedList = (key: string, fallback: string[]): string[] => {
+    const value: unknown = t(`packages.${packageData?.id}.${key}`, { returnObjects: true, defaultValue: fallback });
+    return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : fallback;
+  };
+
   if (!packageData) {
     return (
       <div className="min-h-screen pt-24 flex flex-col justify-center items-center bg-background">
@@ -82,10 +87,14 @@ const PackageDetailPage = () => {
     );
   }
 
+  const pricing = translatedList("pricing", packageData.pricing);
+  const includes = translatedList("includes", packageData.includes);
+  const options = translatedList("options", packageData.options);
+
   return (
     <section className="min-h-screen pt-24 pb-16 bg-background">
       <div className="container mx-auto px-4">
-        <Button 
+        <Button
           onClick={() => setLocation("/packages")}
           variant="outline" 
           className="mb-8 border-gold text-gold hover:bg-gold hover:text-white"
@@ -128,45 +137,51 @@ const PackageDetailPage = () => {
               {t(`packages.${packageData.id}.description`)}
             </p>
             
-            <div className="mb-8">
-              <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                {t("packages.pricing")}
-              </h3>
-              <ul className="space-y-3">
-                {packageData.pricing.map((price, index) => (
-                  <li key={index} className="text-secondary" dangerouslySetInnerHTML={{ __html: price }} />
-                ))}
-              </ul>
-            </div>
-            
-            <div className="mb-8">
-              <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                {t("packages.includes")}
-              </h3>
-              <ul className="space-y-2">
-                {packageData.includes.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="text-gold h-5 w-5 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-secondary">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                {t("packages.options")}
-              </h3>
-              <ul className="space-y-2">
-                {packageData.options.map((option, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span className="text-secondary">{option}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
+            {pricing.length > 0 && (
+              <div className="mb-8">
+                <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
+                  {t("packages.pricing")}
+                </h3>
+                <ul className="space-y-3">
+                  {pricing.map((price, index) => (
+                    <li key={index} className="text-secondary" dangerouslySetInnerHTML={{ __html: price }} />
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {includes.length > 0 && (
+              <div className="mb-8">
+                <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
+                  {t("packages.includes")}
+                </h3>
+                <ul className="space-y-2">
+                  {includes.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <Check className="text-gold h-5 w-5 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-secondary">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {options.length > 0 && (
+              <div>
+                <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
+                  {t("packages.options")}
+                </h3>
+                <ul className="space-y-2">
+                  {options.map((option, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-gold mr-2">•</span>
+                      <span className="text-secondary">{option}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <Button 
               className="mt-8 bg-gold hover:bg-opacity-80 text-white"
               onClick={() => setLocation("/contact")}

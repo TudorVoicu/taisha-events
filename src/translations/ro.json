@@ -50,7 +50,7 @@
   },
   "services": {
     "title": "Serviciile Noastre",
-    "subtitle": "Explorați gama noastră de servicii premium de închiriere narghilele concepute pentru a vă îmbunătăți experiența. Faceți clic pe orice serviciu pentru a afla mai multe despre prețuri și detalii.",
+    "subtitle": "Explorați gama noastră de servicii premium pentru evenimente, concepute pentru a vă îmbunătăți experiența. Faceți clic pe orice serviciu pentru a afla mai multe despre prețuri și detalii.",
     "viewDetails": "Vezi Detalii",
     "pricing": "Prețuri",
     "includes": "Ce Este Inclus",
@@ -58,68 +58,170 @@
     "inquire": "Solicită Acest Serviciu",
     "fotovideo": {
       "title": "Foto-Video",
-      "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
+      "description": "Servicii profesionale de fotografie și videografie care surprind cele mai importante momente ale evenimentului dumneavoastră — de la emoții spontane la cadre cinematice.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Fotograf și videograf profesionist",
+        "Acoperire completă a evenimentului",
+        "Fotografii și videoclipuri editate profesional",
+        "Livrare digitală a tuturor materialelor"
+      ],
+      "options": []
     },
     "hookahs": {
-      "title": "Inchirieri Narghilele",
-      "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
+      "title": "Închirieri Narghilele",
+      "description": "Transformați spațiul dumneavoastră într-un lounge de narghilele de lux. Include narghilele premium, selecție de arome și aranjamente confortabile.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Amenajare elegantă de lounge pentru narghilele",
+        "Narghilele premium și accesorii",
+        "Selecție de arome de tutun de calitate",
+        "Lumini ambientale și decorațiuni",
+        "Maestru de narghilea la fața locului pentru preparare",
+        "Montaj și strângere complete"
+      ],
+      "options": []
     },
     "dancers": {
       "title": "Dansatoare Orientale",
-      "description": "Our most exclusive service featuring rare tobacco blends, limited edition hookahs, and personalized flavor creation with our master blender."
+      "description": "Spectacole profesionale de dans oriental care aduc energie și eleganță exotică evenimentului dumneavoastră, cu coregrafii adaptate ocaziei.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Dansatoare orientale profesioniste",
+        "Coregrafie adaptată evenimentului",
+        "Costume tradiționale și recuzită",
+        "Durata spectacolului adaptată programului"
+      ],
+      "options": []
     },
     "mirror": {
-      "title": "Oglinda Magica",
-      "description": "Customized hookah services for corporate gatherings, team-building events, and business celebrations. Includes branded options."
+      "title": "Oglinda Magică",
+      "description": "O cabină foto interactivă Magic Mirror care vă distrează invitații cu printuri instant, animații amuzante și șabloane personalizate.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Cabină foto Magic Mirror cu asistent",
+        "Sesiuni foto nelimitate pe durata evenimentului",
+        "Printuri instant pentru invitați",
+        "Șablon de print personalizat",
+        "Recuzită și accesorii distractive",
+        "Livrare digitală a tuturor fotografiilor"
+      ],
+      "options": []
     },
     "smoke": {
       "title": "Fum Greu",
-      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+      "description": "Fumul greu creează un efect spectaculos de ceață joasă, care plutește la nivelul podelei fără a se ridica în aer. Este ideal pentru momente speciale precum dansul mirilor, intrări scenice sau cadre foto-video cinematice. Efectul adaugă profunzime, eleganță și un impact vizual deosebit, fără disconfort pentru invitați.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Mașină profesională de fum greu",
+        "Reglaj intensitate fum în funcție de moment (dans, intrare miri, cadre speciale)",
+        "Operator dedicat pentru control și sincronizare în timpul evenimentului",
+        "Testare și calibrare înainte de eveniment"
+      ],
+      "options": []
     },
     "scenes": {
       "title": "Scene",
-      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+      "description": "Scene profesionale pentru evenimente. Serviciu disponibil pentru clienți B2B — contactați-ne pentru detalii și ofertă.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [],
+      "options": []
     },
     "dj": {
       "title": "DJ",
-      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+      "description": "Serviciul DJ asigură atmosfera perfectă pe tot parcursul evenimentului, combinând muzica potrivită cu energia publicului. De la momentele elegante de început până la party-ul de final, DJ-ul adaptează stilurile muzicale în timp real, menținând ringul de dans plin și vibe-ul la cote maxime.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "DJ profesionist cu experiență în evenimente private",
+        "Echipamente audio profesionale (sunet clar, putere adaptată locației)",
+        "Microfoane wireless pentru discursuri și momente speciale",
+        "Playlist personalizat în funcție de eveniment și preferințe",
+        "Adaptare muzicală în timp real la vibe-ul invitaților"
+      ],
+      "options": []
     },
     "ice": {
-      "title": "Gheata Carbonica",
-      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+      "title": "Gheață Carbonică",
+      "description": "Efecte spectaculoase cu gheață carbonică pentru evenimente. Serviciu disponibil pentru clienți B2B — contactați-ne pentru detalii și ofertă.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [],
+      "options": []
     },
     "book": {
       "title": "Audio Guest Book",
-      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
-    }
+      "description": "Audio Guest Book oferă o alternativă elegantă și emoționantă la cartea clasică de oaspeți. Invitații lasă mesaje vocale autentice, pline de emoție, care surprind râsete, urări și momente spontane exact așa cum au fost trăite. Rezultatul este o amintire unică, atemporală, ce poate fi ascultată ori de câte ori doriți, păstrând vii emoțiile evenimentului mult timp după încheierea acestuia.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Audio Guest Book (telefon vintage / design elegant)",
+        "Mesaje vocale nelimitate din partea invitaților",
+        "Configurare și testare înainte de eveniment",
+        "Instrucțiuni simple pentru utilizare de către invitați",
+        "Colectarea și salvarea tuturor mesajelor audio",
+        "Livrare digitală a mesajelor, editate și organizate"
+      ],
+      "options": []
+    },
+    "marturii": {
+      "title": "Mărturii Dulci",
+      "description": "Mărturii dulci personalizate pentru invitații dumneavoastră — un gest de mulțumire elegant, adaptat temei și stilului evenimentului.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [],
+      "options": []
+    },
+    "b2bTitle": "B2B",
+    "b2bSubtitle": "Servicii dedicate partenerilor și clienților business.",
+    "shopTitle": "Shop"
   },
   "serviceDetail": {
     "notFound": "Serviciul nu a fost gasit",
     "backToServices": "Inapoi la servicii"
   },
   "packages": {
-    "title": "Our packages",
-    "subtitle": "We offer service packages for a variety of events.",
-    "viewDetails": "View Details",
-    "pricing": "Pricing",
-    "includes": "What's Included",
-    "options": "Additional Options",
-    "inquire": "Request This Service",
+    "title": "Pachetele Noastre",
+    "subtitle": "Oferim pachete de servicii pentru o varietate de evenimente.",
+    "viewDetails": "Vezi Detalii",
+    "pricing": "Prețuri",
+    "includes": "Ce Este Inclus",
+    "options": "Opțiuni Suplimentare",
+    "inquire": "Solicită Acest Pachet",
     "wedding": {
-      "title": "Wedding",
-      "description": "We will make your special day stress-free."
-    },
-    "baptism": {
-      "title": "Baptism",
-      "description": "idk ce dracu sa scriu aici."
+      "title": "Nuntă",
+      "description": "Un pachet luxos și romantic, creat special pentru ziua voastră. Noi o facem fără griji.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Amenajare lounge personalizată",
+        "Coordonator la fața locului",
+        "Serviciu premium de narghilea",
+        "Elemente florale pentru decor",
+        "Seturi cadou pentru invitați"
+      ],
+      "options": ["Filmare cu drona", "Transmisiune live"]
     },
     "corporate": {
       "title": "Corporate",
-      "description": "Corporate parties that are sure to make an impressiono of your colleagues."
+      "description": "Petreceri corporate care vă vor impresiona cu siguranță colegii.",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Amenajare cu branding-ul companiei",
+        "Personal în uniformă",
+        "Check-in digital pentru invitați",
+        "Cadouri co-branded pentru invitați",
+        "Dashboard de raportare corporate (opțional)"
+      ],
+      "options": ["Tort personalizat", "Artist de baloane"]
     },
     "custom": {
-      "title": "Custom",
-      "description": "Got other upcomming events? Let us help!"
+      "title": "Personalizat",
+      "description": "Aveți alte evenimente în plan? Vă putem ajuta!",
+      "pricing": ["Cere ofertă în funcție de eveniment"],
+      "includes": [
+        "Sesiune inițială de consultanță",
+        "Ofertă de servicii complet personalizată",
+        "Locație și program flexibile",
+        "Opțiuni și extra-uri exclusive",
+        "Suport continuu și asistență în planificare"
+      ],
+      "options": []
     }
   },
   "packageDetail": {

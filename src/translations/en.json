@@ -50,7 +50,7 @@
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Explore our range of premium hookah rental services designed to elevate your experience. Click on any service to learn more about pricing and details.",
+    "subtitle": "Explore our range of premium event services designed to elevate your experience. Click on any service to learn more about pricing and details.",
     "viewDetails": "View Details",
     "pricing": "Pricing",
     "includes": "What's Included",
@@ -58,68 +58,170 @@
     "inquire": "Request This Service",
     "fotovideo": {
       "title": "Foto-Video",
-      "description": "Complete hookah service for weddings, corporate events, and celebrations. Includes professional setup, attendant service, and premium flavors."
+      "description": "Professional photo and video services that capture the most important moments of your event — from candid emotions to cinematic shots.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Professional photographer and videographer",
+        "Full coverage of your event",
+        "Professionally edited photos and videos",
+        "Digital delivery of all materials"
+      ],
+      "options": []
     },
     "hookahs": {
       "title": "Hookah Rental",
-      "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements."
+      "description": "Transform your space into a luxury hookah lounge. Includes premium hookahs, flavor selection, and comfortable seating arrangements.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Elegant hookah lounge setup",
+        "Premium hookahs and accessories",
+        "Selection of quality tobacco flavors",
+        "Ambient lighting and decorations",
+        "On-site hookah master for preparation",
+        "Complete setup and cleanup"
+      ],
+      "options": []
     },
     "dancers": {
-      "title": "Oriental dancers",
-      "description": "Our most exclusive service featuring rare tobacco blends, limited edition hookahs, and personalized flavor creation with our master blender."
+      "title": "Oriental Dancers",
+      "description": "Professional oriental dance performances that bring energy and exotic elegance to your event, with choreography adapted to the occasion.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Professional oriental dancers",
+        "Choreography adapted to your event",
+        "Traditional costumes and props",
+        "Show duration adapted to your program"
+      ],
+      "options": []
     },
     "mirror": {
       "title": "Magic Mirror",
-      "description": "Customized hookah services for corporate gatherings, team-building events, and business celebrations. Includes branded options."
+      "description": "An interactive Magic Mirror photo booth that entertains your guests with instant prints, fun animations, and personalized templates.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Magic Mirror photo booth with attendant",
+        "Unlimited photo sessions during the event",
+        "Instant prints for your guests",
+        "Personalized print template",
+        "Fun props and accessories",
+        "Digital delivery of all photos"
+      ],
+      "options": []
     },
     "smoke": {
       "title": "Heavy Smoke",
-      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+      "description": "Heavy smoke creates a spectacular low-lying fog effect that floats at floor level without rising into the air. It is ideal for special moments such as the first dance, grand entrances, or cinematic photo and video shots. The effect adds depth, elegance, and a striking visual impact, without any discomfort for your guests.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Professional heavy smoke machine",
+        "Smoke intensity adjusted to each moment (first dance, couple's entrance, special shots)",
+        "Dedicated operator for control and synchronization during the event",
+        "Testing and calibration before the event"
+      ],
+      "options": []
     },
     "scenes": {
-      "title": "Scenes",
-      "description": "Taste-focused package featuring our collection of exclusive premium tobacco blends from around the world, with expert flavor guidance."
+      "title": "Stages",
+      "description": "Professional stages for events. Available for B2B clients — contact us for details and a quote.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [],
+      "options": []
     },
     "dj": {
       "title": "DJ",
-      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+      "description": "Our DJ service sets the perfect atmosphere throughout your event, combining the right music with the energy of the crowd. From the elegant opening moments to the final party, the DJ adapts music styles in real time, keeping the dance floor full and the vibe at its peak.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Professional DJ with experience in private events",
+        "Professional audio equipment (clear sound, power adapted to the venue)",
+        "Wireless microphones for speeches and special moments",
+        "Personalized playlist based on the event and your preferences",
+        "Real-time musical adaptation to the guests' vibe"
+      ],
+      "options": []
     },
     "ice": {
       "title": "Dry Ice",
-      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
+      "description": "Spectacular dry ice effects for events. Available for B2B clients — contact us for details and a quote.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [],
+      "options": []
     },
     "book": {
       "title": "Audio Guest Book",
-      "description": "High-end hookah equipment rental for those who prefer to create their own experience. Includes delivery, setup instructions, and pickup."
-    }
+      "description": "The Audio Guest Book offers an elegant and moving alternative to the classic guest book. Guests leave authentic voice messages full of emotion, capturing laughter, wishes, and spontaneous moments exactly as they were experienced. The result is a unique, timeless keepsake that can be listened to whenever you wish, keeping the emotions of your event alive long after it ends.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Audio Guest Book (vintage telephone / elegant design)",
+        "Unlimited voice messages from your guests",
+        "Setup and testing before the event",
+        "Simple instructions for guests to follow",
+        "Collection and safekeeping of all audio messages",
+        "Digital delivery of the messages, edited and organized"
+      ],
+      "options": []
+    },
+    "marturii": {
+      "title": "Sweet Favors",
+      "description": "Personalized sweet favors for your guests — an elegant thank-you gesture, tailored to the theme and style of your event.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [],
+      "options": []
+    },
+    "b2bTitle": "B2B",
+    "b2bSubtitle": "Services dedicated to our business partners and clients.",
+    "shopTitle": "Shop"
   },
   "serviceDetail": {
     "notFound": "Service not found",
     "backToServices": "Back to Services"
   },
   "packages": {
-    "title": "Our packages",
+    "title": "Our Packages",
     "subtitle": "We offer service packages for a variety of events.",
     "viewDetails": "View Details",
     "pricing": "Pricing",
     "includes": "What's Included",
     "options": "Additional Options",
-    "inquire": "Request This Service",
+    "inquire": "Request This Package",
     "wedding": {
       "title": "Wedding",
-      "description": "We will make your special day stress-free."
-    },
-    "baptism": {
-      "title": "Baptism",
-      "description": "idk ce dracu sa scriu aici."
+      "description": "A luxurious and romantic package tailored for your special day. We will make it stress-free.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Customized lounge setup",
+        "On-site coordinator",
+        "Premium hookah service",
+        "Floral elements for decor",
+        "Guest gift sets"
+      ],
+      "options": ["Drone footage", "Live streaming"]
     },
     "corporate": {
       "title": "Corporate",
-      "description": "Corporate parties that are sure to make an impressiono of your colleagues."
+      "description": "Corporate parties that are sure to make an impression on your colleagues.",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Company-branded setup",
+        "Uniformed staff",
+        "Digital check-in for guests",
+        "Co-branded takeaways for guests",
+        "Corporate reporting dashboard (optional)"
+      ],
+      "options": ["Custom cake", "Balloon artist"]
     },
     "custom": {
       "title": "Custom",
-      "description": "Got other upcomming events? Let us help!"
+      "description": "Got other upcoming events? Let us help!",
+      "pricing": ["Request a quote based on your event"],
+      "includes": [
+        "Initial consultation session",
+        "Fully customized service offering",
+        "Flexible location and timing",
+        "Exclusive options and add-ons",
+        "Ongoing support and planning assistance"
+      ],
+      "options": []
     }
   },
   "packageDetail": {
