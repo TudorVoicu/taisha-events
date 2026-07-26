@@ -3,6 +3,7 @@
     "home": "Acasă",
     "packages": "Pachete",
     "services": "Servicii",
+    "b2b": "B2B",
     "story": "Povestea Noastră",
     "blog": "Blog",
     "contact": "Contact"
@@ -10,7 +11,7 @@
   "hero": {
     "title": "Experimentează",
     "subtitle": "Luxul Exclusiv",
-    "description": "Narghilele premium pentru ocaziile speciale, evenimente și întâlniri private.",
+    "description": "Sanctuarul momentelor speciale din viața ta.",
     "cta": "Explorează Serviciile",
     "servicesBtn": "Servicile Noastre",
     "contactBtn" : "Contact"
@@ -22,7 +23,10 @@
     "aboutUsTitle": "Despre noi",
     "aboutUsDescription1": "Suntem o echipă pasionată, dedicată să oferim calitate și valoare prin expertiză și experiență.",
     "aboutUsDescription2": "Misiunea noastră este să oferim servicii excepționale și să construim relații durabile cu clienții noștri.",
-    "readOurStory": "Citește povestea noastră"
+    "readOurStory": "Citește povestea noastră",
+    "reviewsTitle": "Ce Spun Clienții Noștri",
+    "reviewsDescription": "Recenzii reale de la oamenii care ne-au încredințat momentele lor speciale.",
+    "reviewsRatingLabel": "din 5"
   },
   "story": {
     "pageTitle" : "Povestea Noastra",
@@ -162,15 +166,14 @@
       "options": []
     },
     "marturii": {
-      "title": "Mărturii Dulci",
-      "description": "Mărturii dulci personalizate pentru invitații dumneavoastră — un gest de mulțumire elegant, adaptat temei și stilului evenimentului.",
+      "title": "Mărturii",
+      "description": "Mărturii personalizate pentru invitații dumneavoastră — un gest de mulțumire elegant, adaptat temei și stilului evenimentului.",
       "pricing": ["Cere ofertă în funcție de eveniment"],
       "includes": [],
       "options": []
     },
     "b2bTitle": "B2B",
-    "b2bSubtitle": "Servicii dedicate partenerilor și clienților business.",
-    "shopTitle": "Shop"
+    "b2bSubtitle": "Servicii dedicate partenerilor și clienților business."
   },
   "serviceDetail": {
     "notFound": "Serviciul nu a fost gasit",
@@ -278,14 +281,32 @@
       "selectService": "Selectați un Serviciu",
       "message": "Mesajul Dvs",
       "send": "Trimite Mesaj",
+      "eventDate": "Data evenimentului",
+      "eventDatePlaceholder": "Alegeți o dată",
+      "notSure": "Nu sunt sigur",
+      "eventDateRequired": "Alegeți o dată sau bifați „Nu sunt sigur”",
+      "validation": {
+        "nameRequired": "Numele este obligatoriu",
+        "emailInvalid": "Adresă de email invalidă",
+        "phoneRequired": "Numărul de telefon este obligatoriu",
+        "messageShort": "Mesajul este prea scurt"
+      },
+      "servicesGroup": "Servicii",
+      "packagesGroup": "Pachete",
       "services": {
-        "event": "Serviciu Narghilea pentru Evenimente",
-        "private": "Experiență Lounge Privat",
-        "vip": "Experiență VIP Narghilea",
-        "corporate": "Pachet pentru Evenimente Corporative",
-        "flavors": "Experiență de Arome Premium",
-        "equipment": "Închiriere Echipament",
         "other": "Altă Solicitare"
+      },
+      "sending": {
+        "title": "Mesajul se trimite",
+        "description": "Vă rugăm să așteptați un moment..."
+      },
+      "sent": {
+        "title": "Mesaj trimis",
+        "description": "Vă mulțumim pentru mesaj! Vă vom contacta în curând."
+      },
+      "failed": {
+        "title": "Trimiterea a eșuat",
+        "description": "Vă rugăm să încercați din nou mai târziu."
       }
     }
   },
@@ -298,7 +319,8 @@
     "readTime": "min de citit"
   },
   "footer": {
-    "description": "Servicii premium pentru evenimentele si momentele speciale.",
+    "description": "Sanctuarul momentelor speciale din viața ta.",
+    "anpc": "ANPC",
     "quickLinks": "Link-uri Rapide",
     "services": "Servicii Populare",
     "legal": "Legal",

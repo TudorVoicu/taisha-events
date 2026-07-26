@@ -1,0 +1,62 @@
+[
+  {
+    "id": "review-1",
+    "name": "Andreea & Mihai Ionescu",
+    "rating": 5,
+    "date": "2025-09-14",
+    "text": {
+      "ro": "Am colaborat cu Taisha Events pentru nunta noastră și totul a fost impecabil. Fumul greu la dansul mirilor a creat un moment de basm, iar invitații încă vorbesc despre atmosferă. Recomand cu toată încrederea!",
+      "en": "We worked with Taisha Events for our wedding and everything was flawless. The heavy smoke during our first dance created a fairytale moment, and our guests are still talking about the atmosphere. Wholeheartedly recommended!"
+    }
+  },
+  {
+    "id": "review-2",
+    "name": "Cristina Dumitrescu",
+    "rating": 5,
+    "date": "2025-08-02",
+    "text": {
+      "ro": "Audio Guest Book a fost cea mai frumoasă surpriză a serii. Mesajele lăsate de invitați ne-au făcut să plângem de emoție când le-am ascultat. O amintire pe care o vom păstra toată viața.",
+      "en": "The Audio Guest Book was the most beautiful surprise of the evening. The messages our guests left made us cry with emotion when we listened to them. A keepsake we will treasure for life."
+    }
+  },
+  {
+    "id": "review-3",
+    "name": "Alexandru Popa",
+    "rating": 5,
+    "date": "2025-07-19",
+    "text": {
+      "ro": "DJ-ul a citit perfect energia sălii. Ringul de dans a fost plin de la primul până la ultimul cântec. Echipament de calitate, sunet clar și o comunicare excelentă înainte de eveniment.",
+      "en": "The DJ read the energy of the room perfectly. The dance floor was packed from the first song to the last. Quality equipment, clear sound, and excellent communication before the event."
+    }
+  },
+  {
+    "id": "review-4",
+    "name": "Elena Marin",
+    "rating": 5,
+    "date": "2025-06-28",
+    "text": {
+      "ro": "Zona de narghilele a fost punctul de întâlnire al întregii petreceri. Personal foarte atent, arome deosebite și o amenajare care s-a potrivit perfect cu decorul nostru.",
+      "en": "The hookah lounge became the meeting point of the whole party. Very attentive staff, remarkable flavors, and a setup that matched our decor perfectly."
+    }
+  },
+  {
+    "id": "review-5",
+    "name": "Raluca & George Stan",
+    "rating": 4,
+    "date": "2025-05-11",
+    "text": {
+      "ro": "Mărturiile au fost superbe și personalizate exact cum ne-am dorit. Livrarea a venit puțin mai târziu decât plănuisem, dar echipa a comunicat transparent și a rezolvat rapid.",
+      "en": "The favors were gorgeous and personalized exactly as we wanted. Delivery came slightly later than planned, but the team communicated transparently and sorted it out quickly."
+    }
+  },
+  {
+    "id": "review-6",
+    "name": "Ioana Vasilescu",
+    "rating": 5,
+    "date": "2025-04-05",
+    "text": {
+      "ro": "Am ales pachetul foto-video și rezultatul a depășit așteptările. Cadrele sunt naturale, elegante, iar filmul de nuntă îl revedem lunar. Profesioniști adevărați, de la prima discuție până la livrare.",
+      "en": "We chose the photo-video package and the result exceeded our expectations. The shots are natural and elegant, and we rewatch our wedding film every month. True professionals, from the first discussion to delivery."
+    }
+  }
+]

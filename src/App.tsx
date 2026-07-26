@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
+import B2BPage from "@/pages/B2BPage";
 import ContactPage from "@/pages/ContactPage";
 import StoryPage from "@/pages/StoryPage";
 import ServiceDetailPage from "@/pages/ServiceDetailPage";
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/packages/:id" component={PackageDetailPage} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/services/:id" component={ServiceDetailPage} />
+      <Route path="/b2b" component={B2BPage} />
       <Route path="/story" component={StoryPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />

@@ -159,6 +159,13 @@
   .text-gold { color: hsl(var(--gold)); }
   .bg-gold { background-color: hsl(var(--gold)); }
   .border-gold { border-color: hsl(var(--gold)); }
+  .fill-gold { fill: hsl(var(--gold)); }
+
+  /* Soft gold accents (reviews, subtle highlights) */
+  .text-gold-soft { color: hsl(var(--gold) / 0.35); }
+  .bg-gold-soft { background-color: hsl(var(--gold) / 0.12); }
+  .border-gold-soft { border-color: hsl(var(--gold) / 0.35); }
+  .hover\:border-gold-soft:hover { border-color: hsl(var(--gold) / 0.45); }
 
   .text-warm-brown { color: hsl(var(--warm-brown)); }
   .bg-warm-brown { background-color: hsl(var(--warm-brown)); }

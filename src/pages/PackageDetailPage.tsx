@@ -182,9 +182,9 @@ const PackageDetailPage = () => {
               </div>
             )}
 
-            <Button 
+            <Button
               className="mt-8 bg-gold hover:bg-opacity-80 text-white"
-              onClick={() => setLocation("/contact")}
+              onClick={() => setLocation(`/contact?service=package-${packageData.id}`)}
             >
               {t("packages.inquire")}
             </Button>

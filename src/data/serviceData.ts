@@ -159,9 +159,9 @@ export const serviceData: Record<string, Service> = {
   },
   'marturii': {
     id: 'marturii',
-    title: 'Sweet Favors',
+    title: 'Favors',
     images: ['https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
-    description: 'Personalized sweet favors for your guests — an elegant thank-you gesture, tailored to the theme and style of your event.',
+    description: 'Personalized favors for your guests — an elegant thank-you gesture, tailored to the theme and style of your event.',
     pricing: [
       'Request a quote based on your event'
     ],

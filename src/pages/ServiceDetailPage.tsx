@@ -183,9 +183,9 @@ const ServiceDetailPage = () => {
               </div>
             )}
 
-            <Button 
+            <Button
               className="mt-8 bg-gold hover:bg-opacity-80 text-white"
-              onClick={() => setLocation("/contact")}
+              onClick={() => setLocation(`/contact?service=${service.id}`)}
             >
               {t("services.inquire")}
             </Button>

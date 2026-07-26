@@ -5,15 +5,20 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { serviceData } from "@/data/serviceData";
 import ServiceCard from "@/components/ServiceCard";
+import Reviews from "@/components/Reviews";
+
+// The four services highlighted on the homepage, in display order
+const FEATURED_SERVICE_IDS = ["hookahs", "fotovideo", "marturii", "dj"];
 
 const HomePage = () => {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
-  
-  // Only show the first 4 services on the homepage
-  const featuredServices = Object.values(serviceData).slice(0, 4);
+
+  const featuredServices = FEATURED_SERVICE_IDS
+    .map((id) => serviceData[id])
+    .filter(Boolean);
 
   return (
     <>
@@ -99,6 +104,9 @@ const HomePage = () => {
         </div>
       </section>
       
+      {/* Client Reviews Section */}
+      <Reviews />
+
       {/* About Us Brief Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">

@@ -3,6 +3,7 @@
     "home": "Home",
     "packages": "Packages",
     "services": "Services",
+    "b2b": "B2B",
     "story": "Our Story",
     "blog": "Blog",
     "contact": "Contact"
@@ -10,7 +11,7 @@
   "hero": {
     "title": "Experience",
     "subtitle": "Exclusive Luxury",
-    "description": "Premium hookah rentals for your special occasions, events, and private gatherings.",
+    "description": "The sanctuary of your life's special moments.",
     "cta": "Explore Services",
     "servicesBtn": "Our Services",
     "contactBtn" : "Contact"
@@ -22,7 +23,10 @@
     "aboutUsTitle": "About Us",
     "aboutUsDescription1": "We are a passionate team dedicated to delivering quality and value through our expertise and experience.",
     "aboutUsDescription2": "Our mission is to provide exceptional service and build lasting relationships with our clients.",
-    "readOurStory": "Read Our Story"
+    "readOurStory": "Read Our Story",
+    "reviewsTitle": "What Our Clients Say",
+    "reviewsDescription": "Real reviews from the people who trusted us with their special moments.",
+    "reviewsRatingLabel": "out of 5"
   },
   "story": {
     "pageTitle" : "Our story",
@@ -162,15 +166,14 @@
       "options": []
     },
     "marturii": {
-      "title": "Sweet Favors",
-      "description": "Personalized sweet favors for your guests — an elegant thank-you gesture, tailored to the theme and style of your event.",
+      "title": "Favors",
+      "description": "Personalized favors for your guests — an elegant thank-you gesture, tailored to the theme and style of your event.",
       "pricing": ["Request a quote based on your event"],
       "includes": [],
       "options": []
     },
     "b2bTitle": "B2B",
-    "b2bSubtitle": "Services dedicated to our business partners and clients.",
-    "shopTitle": "Shop"
+    "b2bSubtitle": "Services dedicated to our business partners and clients."
   },
   "serviceDetail": {
     "notFound": "Service not found",
@@ -278,14 +281,32 @@
       "selectService": "Select a Service",
       "message": "Your Message",
       "send": "Send Message",
+      "eventDate": "Event Date",
+      "eventDatePlaceholder": "Pick a date",
+      "notSure": "Not sure",
+      "eventDateRequired": "Please pick a date or check \"Not sure\"",
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailInvalid": "Invalid email address",
+        "phoneRequired": "Phone number is required",
+        "messageShort": "Message is too short"
+      },
+      "servicesGroup": "Services",
+      "packagesGroup": "Packages",
       "services": {
-        "event": "Event Hookah Service",
-        "private": "Private Lounge Experience",
-        "vip": "VIP Hookah Experience",
-        "corporate": "Corporate Event Package",
-        "flavors": "Premium Flavor Experience",
-        "equipment": "Equipment Rental",
         "other": "Other Inquiry"
+      },
+      "sending": {
+        "title": "Message is being sent",
+        "description": "Please wait a moment..."
+      },
+      "sent": {
+        "title": "Message sent",
+        "description": "Thank you for your message! We will contact you shortly."
+      },
+      "failed": {
+        "title": "Failed to send",
+        "description": "Please try again later."
       }
     }
   },
@@ -298,7 +319,8 @@
     "readTime": "min read"
   },
   "footer": {
-    "description": "Premium services for special events and moments.",
+    "description": "The sanctuary of your life's special moments.",
+    "anpc": "ANPC",
     "quickLinks": "Quick Links",
     "services": "Popular Services",
     "legal": "Legal",

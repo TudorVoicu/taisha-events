@@ -35,10 +35,10 @@ const Footer = () => {
           <div>
             <h4 className="font-playfair text-lg text-gold mb-4">{t("footer.services")}</h4>
             <ul className="space-y-2">
-              <li><Link href="/services/fotovideo" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.fotovideo.title")}</Link></li>
               <li><Link href="/services/hookahs" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.hookahs.title")}</Link></li>
-              <li><Link href="/services/dancers" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.dancers.title")}</Link></li>
-              <li><Link href="/services/mirror" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.mirror.title")}</Link></li>
+              <li><Link href="/services/fotovideo" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.fotovideo.title")}</Link></li>
+              <li><Link href="/services/marturii" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.marturii.title")}</Link></li>
+              <li><Link href="/services/dj" className="text-light-gray hover:text-gold transition-colors duration-300 text-sm">{t("services.dj.title")}</Link></li>
             </ul>
           </div>
           
@@ -51,11 +51,28 @@ const Footer = () => {
           </div>
         </div>
         
+        {/* ANPC — consumer protection authority link, required for RO businesses */}
+        <div className="border-t border-dark-purple mt-8 pt-8 flex flex-col items-center gap-3">
+          <a
+            href="https://anpc.ro/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 text-light-gray hover:text-gold transition-colors duration-300"
+          >
+            {/* Drop the ANPC banner at public/images/anpc.png to fill this slot */}
+            <img
+              src="/images/anpc.png"
+              alt={t("footer.anpc")}
+              className="h-16 w-auto max-w-[220px] object-contain"
+            />
+          </a>
+        </div>
+
         <div className="border-t border-dark-purple mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-light-gray text-sm mb-4 md:mb-0">
             &copy; {currentYear} Taisha Events {t("footer.rights")}
           </p>
-          
+
           <div className="flex gap-4">
             <a href="#" className="text-light-gray hover:text-gold transition-colors duration-300" aria-label="Instagram">
               <Instagram className="h-5 w-5" />

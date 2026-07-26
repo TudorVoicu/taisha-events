@@ -12,9 +12,8 @@ import { packagesData } from "@/data/packageData";
 import clsx from "clsx";
 
 interface DropdownItem {
-  href?: string;
+  href: string;
   label: string;
-  isHeader?: boolean;
 }
 
 interface NavLink {
@@ -32,21 +31,18 @@ const Header = () => {
   const isMobile = useIsMobile();
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const b2bServices = Object.values(serviceData).filter(service => service.section === "b2b");
-  const shopServices = Object.values(serviceData).filter(service => service.section !== "b2b");
+  const toDropdownItem = (service: { id: string }): DropdownItem => ({
+    href: `/services/${service.id}`,
+    label: t(`services.${service.id}.title`)
+  });
 
-  const servicesDropdown: DropdownItem[] = [
-    { label: t("services.b2bTitle"), isHeader: true },
-    ...b2bServices.map(service => ({
-      href: `/services/${service.id}`,
-      label: t(`services.${service.id}.title`)
-    })),
-    { label: t("services.shopTitle"), isHeader: true },
-    ...shopServices.map(service => ({
-      href: `/services/${service.id}`,
-      label: t(`services.${service.id}.title`)
-    }))
-  ];
+  const servicesDropdown: DropdownItem[] = Object.values(serviceData)
+    .filter(service => service.section !== "b2b")
+    .map(toDropdownItem);
+
+  const b2bDropdown: DropdownItem[] = Object.values(serviceData)
+    .filter(service => service.section === "b2b")
+    .map(toDropdownItem);
 
   const packagesDropdown = Object.values(packagesData).map(pkg => ({
     href: `/packages/${pkg.id}`,
@@ -60,10 +56,15 @@ const Header = () => {
       label: t("nav.packages"),
       dropdown: packagesDropdown
     },
-    { 
-      href: "/services", 
+    {
+      href: "/services",
       label: t("nav.services"),
-      dropdown: servicesDropdown 
+      dropdown: servicesDropdown
+    },
+    {
+      href: "/b2b",
+      label: t("nav.b2b"),
+      dropdown: b2bDropdown
     },
     { href: "/story", label: t("nav.story") },
     { href: "/blog", label: t("nav.blog") },
@@ -148,27 +149,23 @@ const Header = () => {
                   {activeDropdown === link.href && (
                     <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-background border border-gold py-1 z-50">
                       {link.dropdown?.map((item, index) => {
-                        if (item.isHeader) {
-                          return (
-                            <div
-                              key={`header-${item.label}`}
-                              className={clsx(
-                                "px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-gold select-none cursor-default",
-                                index === 0 ? "pt-2" : "pt-3 mt-2 border-t border-gold/30"
-                              )}
-                            >
-                              {item.label}
-                            </div>
-                          );
-                        }
+                        if (!link.dropdown) return null;
+                        const isFirst = index === 0;
+                        const isLast = index === link.dropdown.length - 1;
+
+                        const hoverBorders = isFirst
+                          ? "hover:border-b-[1px]"
+                          : isLast
+                          ? "hover:border-t-[1px]"
+                          : "hover:border-t-[1px] hover:border-b-[1px]";
 
                         return (
                           <Link
                             key={item.href}
-                            href={item.href!}
+                            href={item.href}
                             className={clsx(
                               "block px-4 py-2 text-sm text-foreground border border-transparent border-t border-b",
-                              "hover:border-t-[1px] hover:border-b-[1px]",
+                              hoverBorders,
                               "hover:border-[hsl(var(--color-accent))] hover:border-l-0 hover:border-r-0 hover:pl-[calc(1rem+1px)]"
                             )}
                           >
@@ -227,24 +224,15 @@ const Header = () => {
                     
                     {activeDropdown === link.href && (
                       <div className="py-2 w-full">
-                        {link.dropdown.map((item) =>
-                          item.isHeader ? (
-                            <div
-                              key={`header-${item.label}`}
-                              className="pt-3 pb-1 text-xs font-semibold uppercase tracking-widest text-gold select-none"
-                            >
-                              {item.label}
-                            </div>
-                          ) : (
-                            <Link
-                              key={item.href}
-                              href={item.href!}
-                              className="block py-2 text-white hover:text-gold text-sm"
-                            >
-                              {item.label}
-                            </Link>
-                          )
-                        )}
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="block py-2 text-white hover:text-gold text-sm"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
                       </div>
                     )}
                   </div>
