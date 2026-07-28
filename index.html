@@ -2,9 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/hookah.png" />
+    <!--
+      The white logo disappears on a light background and the dark one on a dark
+      background, so the favicon shows whichever contrasts with the browser
+      theme. The href below is the light-theme default; the script swaps it and
+      keeps following the theme while the tab stays open.
+    -->
+    <link id="favicon" rel="icon" type="image/png" href="/logo-dark.png" />
+    <script>
+      (function () {
+        var favicon = document.getElementById("favicon");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyFavicon() {
+          favicon.href = prefersDark.matches
+            ? "/logo-white.png"
+            : "/logo-dark.png";
+        }
+
+        applyFavicon();
+        prefersDark.addEventListener("change", applyFavicon);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Taisha Events</title>
   </head>
   <body>
     <div id="root"></div>

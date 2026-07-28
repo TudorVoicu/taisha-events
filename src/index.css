@@ -10,7 +10,8 @@
   --color-background: 0 0% 96%;
   --color-secondary: 0 0% 18%;
   --color-tertiary: 33 15% 41%;
-  --color-custom-gray: 0 0% 20%;
+  --color-white-gray: 0 0% 80%;
+  --color-custom-gray: 0 0% 5%;
 
   --background: var(--color-background);
   --foreground: var(--color-primary);
@@ -99,6 +100,7 @@
   }
 
   .text-custom-gray { color: hsl(var(--color-custom-gray)); }
+  .text-white-gray { color: hsl(var(--color-white-gray)); }
   .bg-custom-gray { background-color: hsl(var(--color-custom-gray)); }
   .border-custom-gray { border-color: hsl(var(--color-custom-gray)); }
 

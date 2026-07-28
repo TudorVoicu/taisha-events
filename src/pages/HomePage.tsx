@@ -16,6 +16,14 @@ const HomePage = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
 
+  // Shared by every hero block so they fade in on load and out on scroll together
+  const fadeOnScroll = {
+    style: { opacity },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 1 },
+  };
+
   const featuredServices = FEATURED_SERVICE_IDS
     .map((id) => serviceData[id])
     .filter(Boolean);
@@ -26,31 +34,38 @@ const HomePage = () => {
       <section className="hero-section relative">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1517914515328-83ea9bd8b353?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+            src="/images/home/background.jpeg"
             alt="Luxury hookah lounge" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/70 to-primary/90 opacity-70"></div>
         </div>
         
-        <motion.div 
+        {/*
+          The fade lives on each block rather than on this container: an ancestor
+          with opacity < 1 becomes a "backdrop root", which would leave the
+          title's backdrop-blur with nothing to blur as soon as the page scrolls.
+          The scroll-driven scale can stay here — transforms don't isolate the
+          backdrop.
+        */}
+        <motion.div
           className="container mx-auto px-4 z-10 text-center"
-          style={{ opacity, scale }}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          style={{ scale }}
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="bg-primary/40 backdrop-blur-sm p-12 rounded-lg border border-gold inline-block mb-8">
-            <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-custom-gray">
+          <motion.div className="bg-primary/40 backdrop-blur-sm p-12 rounded-lg border border-gold inline-block mb-8" {...fadeOnScroll}>
+            <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-white-gray">
               <span className="text-gold">Taisha</span> Events
             </h1>
-          </div>
-          
-          <p className="font-montserrat text-lg md:text-xl text-custom-gray max-w-2xl mx-auto mb-10 drop-shadow-lg">
-            {t("hero.description")}
-          </p>
-          
-          <div className="flex gap-4 justify-center">
+          </motion.div>
+
+          <motion.p className="font-montserrat font-bold text-2xl md:text-2xl text-custom-gray max-w-2xl my-6 mx-auto mb-10 drop-shadow-lg" {...fadeOnScroll}>
+              {t("hero.description")}
+          </motion.p>
+
+          <motion.div className="flex gap-4 justify-center" {...fadeOnScroll}>
             <Link href="/services">
               <Button className="bg-gold hover:bg-opacity-80 text-white font-medium py-6 px-8 text-lg hover-button">
                 {t("hero.servicesBtn")}
@@ -61,7 +76,7 @@ const HomePage = () => {
                 {t("hero.contactBtn")}
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -108,36 +123,34 @@ const HomePage = () => {
       <Reviews />
 
       {/* About Us Brief Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gold mb-6">
-                {t("home.aboutUsTitle")}
-              </h2>
-              <p className="mb-6 leading-relaxed">
-                {t("home.aboutUsDescription1")}
-              </p>
-              <p className="mb-8 leading-relaxed">
-                {t("home.aboutUsDescription2")}
-              </p>
-              <Link href="/story">
-                <Button className="bg-gold hover:bg-opacity-80 text-white inline-flex items-center gap-2 hover-button">
-                  {t("home.readOurStory")}
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1551214851-bccdafc5d75a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="Luxury hookah setup" 
-                className="rounded-lg shadow-xl w-full" 
-              />
+      <section
+          className="py-20 text-white bg-cover bg-center bg-no-repeat relative"
+          style={{ backgroundImage: "url('/images/home/luxury-hookah.png')" }}
+        >
+          <div className="absolute inset-0 bg-primary/70"></div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gold mb-6">
+                  {t("home.aboutUsTitle")}
+                </h2>
+                <p className="mb-6 leading-relaxed">
+                  {t("home.aboutUsDescription1")}
+                </p>
+                <p className="mb-8 leading-relaxed">
+                  {t("home.aboutUsDescription2")}
+                </p>
+                <Link href="/story">
+                  <Button className="bg-gold hover:bg-opacity-80 text-white inline-flex items-center gap-2 hover-button">
+                    {t("home.readOurStory")}
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     </>
   );
 };

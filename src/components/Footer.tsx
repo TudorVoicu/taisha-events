@@ -13,9 +13,13 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
               <div className="bg-dark-purple p-2 rounded-lg mr-2">
-                <span className="text-gold font-playfair font-bold text-xl">TE</span>
+                <img 
+                  src="logo-white.png"
+                  alt="TE" 
+                  className="w-12 h-17 my-1 mx-2 object-cover"
+                />
               </div>
-              <span className="text-white font-playfair text-lg">Taisha Events</span>
+              <span className="text-white font-playfair text-xl -mx-4">Taisha Events</span>
             </Link>
             <p className="text-light-gray text-sm">
               {t("footer.description")}

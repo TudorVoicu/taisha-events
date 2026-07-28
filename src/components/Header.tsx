@@ -118,8 +118,12 @@ const Header = () => {
         transition={{ duration: 0, ease: "easeInOut" }}
       >
         <Link href="/" className="flex items-center">
-          <div className="bg-primary p-2 rounded-lg mr-2 border border-gold">
-            <span className="text-gold font-playfair font-bold text-2xl">TE</span>
+          <div className="bg-primary w-12 h-12 p-0 rounded-lg mr-2 border border-gold">
+            <img 
+              src="logo-white.png"
+              alt="TE" 
+              className="w-7 h-10 my-1 mx-2 object-cover"
+            />
           </div>
           <span className="text-white font-playfair text-xl">Taisha Events</span>
         </Link>
