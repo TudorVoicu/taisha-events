@@ -7,6 +7,12 @@ straight to EmailJS. There is nothing to deploy but `dist/` (built on Render fro
 Stack: **Vite 6 + React 19 + TypeScript (strict) + Tailwind v4 + wouter + react-i18next + framer-motion + shadcn/ui (Radix)**.
 Small: ~3.3k lines of app code outside `src/components/ui`.
 
+## How the owner wants you to report
+
+**Don't narrate the work.** A short acknowledgement up front, then go quiet and work, then **one** final
+message describing what happened. No running commentary between tool calls, no "now I'll check X" play-by-play.
+Investigate and verify as thoroughly as the task deserves — just don't stream it.
+
 ## Commands
 
 | | |
@@ -88,11 +94,26 @@ only in the data file.
 in the Header.
 
 **Add a color / utility** — `src/index.css` only. There is **no `tailwind.config.js`** (Tailwind v4 via the
-`@tailwindcss/vite` plugin) — don't create one. Theme colors are HSL triples in `:root` exposed as hand-written
-utilities in `@layer utilities`: `text-gold / bg-gold / border-gold / fill-gold`, `*-gold-soft`, `text-light-gray`,
-`bg-dark-gray`, `text-custom-gray`, `text-white-gray`, `bg-whatsapp`, plus `font-playfair / font-montserrat /
-font-cormorant`, `hover-scale`, `hover-button`, `services-grid`, `hero-section`, `whatsapp-button`. A class not
-listed there and not a stock Tailwind class does nothing.
+`@tailwindcss/vite` plugin) — don't create one. Theme values are HSL triples in `:root`. Brand colors are
+declared with **`@utility`** (top-level, near the top of the file): `text/bg/border/fill-gold`,
+`*-warm-brown`, `*-dark-gray`, `*-light-gray`, `*-custom-gray`, `text-white-gray`, `*-whatsapp`. Everything
+else — `*-gold-soft`, `font-playfair / font-montserrat / font-cormorant`, `hover-scale`, `hover-button`,
+`services-grid`, `hero-section`, `whatsapp-button`, and the shadcn theme aliases (`bg-background`,
+`bg-accent`, `text-muted-foreground`, …) — is still hand-written inside `@layer utilities`. A class that is
+neither of those nor stock Tailwind does nothing.
+
+**`hover:` alone is desktop-only.** Tailwind v4 gates `hover:` behind `@media (hover: hover)`, so a
+touch-screen tap gets no feedback at all. Pair it with `active:` for anything a phone user presses — the
+detail-page back buttons use `hover:bg-gold hover:text-white active:bg-gold active:text-white`. iOS Safari
+additionally ignores `:active` until the page has a touch listener, which is what the no-op `touchstart`
+listener in [main.tsx](src/main.tsx) exists for — don't delete it as dead code.
+
+**Use `@utility`, never a hand-written class, for anything you need a variant on.** Tailwind only generates
+variants for utilities it knows about, so a hand-written `.bg-gold` gives you **no** `hover:bg-gold` — the
+class silently emits zero CSS and `!important` can't rescue it. This is why the detail-page "Back to…"
+buttons had dead hover states. Note the shadcn aliases are still hand-written, so `hover:bg-accent` (used by
+the Button `outline`/`ghost` variants) is likewise inert — converting those would change hover appearance
+site-wide, so it was left alone deliberately.
 
 Page conventions worth copying rather than reinventing: `motion.div` fade-in-from-`y` header block, a
 `w-24 h-1 bg-gold mx-auto` divider under the title, `container mx-auto px-4`, `min-h-screen pt-24 pb-16`
@@ -115,6 +136,15 @@ Page conventions worth copying rather than reinventing: `motion.div` fade-in-fro
 - **EmailJS credentials are inline** in [ContactPage.tsx:124](src/pages/ContactPage.tsx:124) (service
   `zoho_taisha_smtp`, template `template_2x6ikqs`, public key `dL93QDuUB_gKPv1fR`). Client-side by design —
   the public key is not a secret. There is no `.env` and no `import.meta.env` usage anywhere.
+- **Reference `public/` assets with a leading slash** (`/logo-white.png`, not `logo-white.png`). Without it
+  the URL is relative to the current route, so it 404s on any nested path (`/services/dj/logo-white.png`) —
+  and because Header/Footer never remount during client-side navigation, it only breaks on a hard refresh of
+  a deep link, which makes it easy to miss.
+- **Never put an animated `opacity` on an ancestor of a `backdrop-blur-*` element.** An ancestor with
+  `opacity < 1` becomes a *backdrop root*, so the blur silently renders as nothing — computed style still
+  reports `blur(8px)`, so this is only visible in a screenshot. The homepage hero hit exactly this: the
+  scroll fade sits on each hero block while only the `scale` stays on the container
+  ([HomePage.tsx:44](src/pages/HomePage.tsx:44)).
 - The contact form deep-links: `/contact?service=<id>` preselects the dropdown. The email body always labels
   the date in Romanian (the Taisha team reads it), regardless of UI language.
 - **`package_all.json` is a stale copy** of `package.json` (differs by `@emailjs/browser` / `tw-animate-css`).

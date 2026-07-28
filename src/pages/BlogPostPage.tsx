@@ -50,7 +50,7 @@ const BlogPostPage = () => {
             <Link href="/blog">
               <Button 
                 variant="outline" 
-                className="mb-6 border-gold text-gold hover:bg-gold hover:text-white"
+                className="mb-6 border-gold text-gold hover:bg-gold hover:text-white active:bg-gold active:text-white"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 {t("blog.backToBlog")}
@@ -99,7 +99,7 @@ const BlogPostPage = () => {
             <Link href="/blog">
               <Button 
                 variant="outline" 
-                className="border-gold text-gold hover:bg-gold hover:text-white"
+                className="border-gold text-gold hover:bg-gold hover:text-white active:bg-gold active:text-white"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 {t("blog.backToBlog")}

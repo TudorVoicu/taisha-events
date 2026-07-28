@@ -113,7 +113,10 @@ export const serviceData: Record<string, Service> = {
   'dj': {
     id: 'dj',
     title: 'DJ',
-    images: ['https://images.unsplash.com/photo-1579628089068-9877d46889df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
+    images: [
+      "/images/services/dj/dj-1.jpg",
+      "/images/services/dj/dj-2.jpg"
+    ],
     description: 'Our DJ service sets the perfect atmosphere throughout your event, combining the right music with the energy of the crowd. From the elegant opening moments to the final party, the DJ adapts music styles in real time, keeping the dance floor full and the vibe at its peak.',
     pricing: [
       'Request a quote based on your event'

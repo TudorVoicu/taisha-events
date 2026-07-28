@@ -99,7 +99,7 @@ const ServiceDetailPage = () => {
         <Button
           onClick={() => setLocation("/services")}
           variant="outline"
-          className="mb-8 border-gold text-gold hover:bg-gold hover:text-white"
+          className="mb-8 border-gold text-gold hover:bg-gold hover:text-white active:bg-gold active:text-white"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           {t("serviceDetail.backToServices")}
@@ -183,9 +183,9 @@ const ServiceDetailPage = () => {
               </div>
             )}
 
-            <Button
+            <Button 
               className="mt-8 bg-gold hover:bg-opacity-80 text-white"
-              onClick={() => setLocation(`/contact?service=${service.id}`)}
+              onClick={() => setLocation("/contact")}
             >
               {t("services.inquire")}
             </Button>

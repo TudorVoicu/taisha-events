@@ -14,7 +14,7 @@ const Footer = () => {
             <Link href="/" className="flex items-center mb-4">
               <div className="bg-dark-purple p-2 rounded-lg mr-2">
                 <img 
-                  src="logo-white.png"
+                  src="/logo-white.png"
                   alt="TE" 
                   className="w-12 h-17 my-1 mx-2 object-cover"
                 />
@@ -54,9 +54,12 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
-        {/* ANPC — consumer protection authority link, required for RO businesses */}
-        <div className="border-t border-dark-purple mt-8 pt-8 flex flex-col items-center gap-3">
+
+        <div className="border-t border-dark-purple mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-light-gray text-sm mb-4 md:mb-0">
+            &copy; {currentYear} Taisha Events {t("footer.rights")}
+          </p>
+
           <a
             href="https://anpc.ro/"
             target="_blank"
@@ -70,12 +73,6 @@ const Footer = () => {
               className="h-16 w-auto max-w-[220px] object-contain"
             />
           </a>
-        </div>
-
-        <div className="border-t border-dark-purple mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-light-gray text-sm mb-4 md:mb-0">
-            &copy; {currentYear} Taisha Events {t("footer.rights")}
-          </p>
 
           <div className="flex gap-4">
             <a href="#" className="text-light-gray hover:text-gold transition-colors duration-300" aria-label="Instagram">

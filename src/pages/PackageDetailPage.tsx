@@ -97,7 +97,7 @@ const PackageDetailPage = () => {
         <Button
           onClick={() => setLocation("/packages")}
           variant="outline" 
-          className="mb-8 border-gold text-gold hover:bg-gold hover:text-white"
+          className="mb-8 border-gold text-gold hover:bg-gold hover:text-white active:bg-gold active:text-white"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           {t("packageDetail.backToPackages")}

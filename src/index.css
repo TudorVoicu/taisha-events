@@ -63,6 +63,36 @@
   --ring: var(--color-accent);
 }
 
+/*
+  The brand colours are declared with @utility rather than as plain classes in
+  @layer utilities on purpose: Tailwind only generates variants for utilities it
+  knows about, so a hand-written `.bg-gold` gives you no `hover:bg-gold` at all —
+  the class silently produces nothing. @utility registers them properly, so
+  hover:, focus:, md: … all work. Add new brand colours here, not below.
+*/
+@utility text-gold { color: hsl(var(--gold)); }
+@utility bg-gold { background-color: hsl(var(--gold)); }
+@utility border-gold { border-color: hsl(var(--gold)); }
+@utility fill-gold { fill: hsl(var(--gold)); }
+
+@utility text-warm-brown { color: hsl(var(--warm-brown)); }
+@utility bg-warm-brown { background-color: hsl(var(--warm-brown)); }
+@utility border-warm-brown { border-color: hsl(var(--warm-brown)); }
+
+@utility text-dark-gray { color: hsl(var(--dark-gray)); }
+@utility bg-dark-gray { background-color: hsl(var(--dark-gray)); }
+
+@utility text-light-gray { color: hsl(var(--light-gray)); }
+@utility bg-light-gray { background-color: hsl(var(--light-gray)); }
+
+@utility text-custom-gray { color: hsl(var(--color-custom-gray)); }
+@utility bg-custom-gray { background-color: hsl(var(--color-custom-gray)); }
+@utility border-custom-gray { border-color: hsl(var(--color-custom-gray)); }
+@utility text-white-gray { color: hsl(var(--color-white-gray)); }
+
+@utility text-whatsapp { color: hsl(var(--whatsapp-green)); }
+@utility bg-whatsapp { background-color: hsl(var(--whatsapp-green)); }
+
 @layer base {
   * {
     border-color: hsl(var(--border));
@@ -98,11 +128,6 @@
   .hover-button {
     @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg;
   }
-
-  .text-custom-gray { color: hsl(var(--color-custom-gray)); }
-  .text-white-gray { color: hsl(var(--color-white-gray)); }
-  .bg-custom-gray { background-color: hsl(var(--color-custom-gray)); }
-  .border-custom-gray { border-color: hsl(var(--color-custom-gray)); }
 
   .button-cursor-pointer {
     cursor: pointer;
@@ -157,30 +182,11 @@
 
   .ring { box-shadow: 0 0 0 2px hsl(var(--ring)); }
 
-  /* Specific named colors */
-  .text-gold { color: hsl(var(--gold)); }
-  .bg-gold { background-color: hsl(var(--gold)); }
-  .border-gold { border-color: hsl(var(--gold)); }
-  .fill-gold { fill: hsl(var(--gold)); }
-
   /* Soft gold accents (reviews, subtle highlights) */
   .text-gold-soft { color: hsl(var(--gold) / 0.35); }
   .bg-gold-soft { background-color: hsl(var(--gold) / 0.12); }
   .border-gold-soft { border-color: hsl(var(--gold) / 0.35); }
   .hover\:border-gold-soft:hover { border-color: hsl(var(--gold) / 0.45); }
-
-  .text-warm-brown { color: hsl(var(--warm-brown)); }
-  .bg-warm-brown { background-color: hsl(var(--warm-brown)); }
-  .border-warm-brown { border-color: hsl(var(--warm-brown)); }
-
-  .text-dark-gray { color: hsl(var(--dark-gray)); }
-  .bg-dark-gray { background-color: hsl(var(--dark-gray)); }
-
-  .text-light-gray { color: hsl(var(--light-gray)); }
-  .bg-light-gray { background-color: hsl(var(--light-gray)); }
-
-  .text-whatsapp { color: hsl(var(--whatsapp-green)); }
-  .bg-whatsapp { background-color: hsl(var(--whatsapp-green)); }
 
   /* Accordion animations */
   @keyframes accordion-down {

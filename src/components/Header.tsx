@@ -120,7 +120,7 @@ const Header = () => {
         <Link href="/" className="flex items-center">
           <div className="bg-primary w-12 h-12 p-0 rounded-lg mr-2 border border-gold">
             <img 
-              src="logo-white.png"
+              src="/logo-white.png"
               alt="TE" 
               className="w-7 h-10 my-1 mx-2 object-cover"
             />
